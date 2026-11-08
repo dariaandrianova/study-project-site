@@ -1,0 +1,273 @@
+{
+  "source": "компоненты.fig",
+  "sha256": "ce179a6855b4d757da65d16a55483879800284183c8c5be2005fedf8cc5cd053",
+  "components": [
+    {
+      "file": "icon-calendar.svg",
+      "figNode": "14:833",
+      "viewBox": "0 0 16 16",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "circle-arrow.svg",
+      "figNode": "14:821",
+      "viewBox": "0 0 32 32",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "list-row.svg",
+      "figNode": "14:853",
+      "viewBox": "0 0 361 56",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "event-day.svg",
+      "figNode": "14:855",
+      "viewBox": "0 0 393 90",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "icon-home.svg",
+      "figNode": "14:835",
+      "viewBox": "0 0 24 24",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "progress-line.svg",
+      "figNode": "14:847",
+      "viewBox": "0 0 337 8",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "icon-car.svg",
+      "figNode": "14:836",
+      "viewBox": "0 0 24 24",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "event-card.svg",
+      "figNode": "14:854",
+      "viewBox": "0 0 393 262",
+      "text": "outlined",
+      "embeddedBitmap": true
+    },
+    {
+      "file": "icon-ticket.svg",
+      "figNode": "14:837",
+      "viewBox": "0 0 24 24",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "button-disabled.svg",
+      "figNode": "14:817",
+      "viewBox": "0 0 373.33334 52",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "icon-profile.svg",
+      "figNode": "14:859",
+      "viewBox": "0 0 24 24",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "circle-plus.svg",
+      "figNode": "14:827",
+      "viewBox": "0 0 32 32",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "back-button.svg",
+      "figNode": "14:942",
+      "viewBox": "0 0 44 44",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "button-pressed.svg",
+      "figNode": "14:815",
+      "viewBox": "0 0 373.33334 52",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "icon-chat.svg",
+      "figNode": "14:860",
+      "viewBox": "0 0 24 24",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "navigation-home.svg",
+      "figNode": "14:862",
+      "viewBox": "0 0 393 91",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "button-default.svg",
+      "figNode": "14:813",
+      "viewBox": "0 0 373.33334 52",
+      "text": "outlined",
+      "embeddedBitmap": false
+    },
+    {
+      "file": "search-field.svg",
+      "figNode": "14:795",
+      "viewBox": "0 0 346 48",
+      "text": "outlined",
+      "embeddedBitmap": false
+    }
+  ],
+  "currentShowcase": [
+    {
+      "component": "Topbar",
+      "groupNode": "14:938",
+      "variants": [
+        {
+          "node": "14:939",
+          "file": "topbar.svg",
+          "viewBox": "0 0 393 106"
+        }
+      ]
+    },
+    {
+      "component": "Tab Bar - iPhone",
+      "groupNode": "14:861",
+      "variants": [
+        {
+          "node": "14:862",
+          "file": "navigation-home.svg",
+          "state": "home",
+          "viewBox": "0 0 393 91"
+        }
+      ]
+    },
+    {
+      "component": "Button",
+      "groupNode": "14:812",
+      "variants": [
+        {
+          "node": "14:813",
+          "file": "button-default.svg",
+          "state": "default",
+          "viewBox": "0 0 373.33334 52"
+        },
+        {
+          "node": "14:815",
+          "file": "button-pressed.svg",
+          "state": "pressed",
+          "viewBox": "0 0 373.33334 52"
+        },
+        {
+          "node": "14:817",
+          "file": "button-disabled.svg",
+          "state": "disabled",
+          "viewBox": "0 0 373.33334 52"
+        }
+      ]
+    },
+    {
+      "component": "Button_circle_32",
+      "groupNode": "14:820",
+      "variants": [
+        {
+          "node": "14:821",
+          "file": "circle-arrow-default.svg",
+          "type": "arrow",
+          "state": "default",
+          "viewBox": "0 0 32 32"
+        },
+        {
+          "node": "14:823",
+          "file": "circle-arrow-pressed.svg",
+          "type": "arrow",
+          "state": "pressed",
+          "viewBox": "0 0 32 32"
+        },
+        {
+          "node": "14:825",
+          "file": "circle-arrow-disabled.svg",
+          "type": "arrow",
+          "state": "disabled",
+          "viewBox": "0 0 32 32"
+        },
+        {
+          "node": "14:827",
+          "file": "circle-plus-default.svg",
+          "type": "plus",
+          "state": "default",
+          "viewBox": "0 0 32 32"
+        },
+        {
+          "node": "14:829",
+          "file": "circle-plus-pressed.svg",
+          "type": "plus",
+          "state": "pressed",
+          "viewBox": "0 0 32 32"
+        },
+        {
+          "node": "14:831",
+          "file": "circle-plus-disabled.svg",
+          "type": "plus",
+          "state": "disabled",
+          "viewBox": "0 0 32 32"
+        }
+      ]
+    },
+    {
+      "component": "Ticket",
+      "groupNode": "14:232",
+      "variants": [
+        {
+          "node": "14:854",
+          "file": "ticket.svg",
+          "originalSize": {
+            "width": 393,
+            "height": 262
+          },
+          "viewBox": "-64 -64 521 390",
+          "exportPadding": 64,
+          "shadowNode": "14:233",
+          "shadow": {
+            "type": "DROP_SHADOW",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "radius": 20,
+            "visible": true,
+            "blendMode": "NORMAL",
+            "spread": 0,
+            "showShadowBehindNode": false,
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.10000000149011612
+            },
+            "authoredColor": {
+              "space": "DEFAULT",
+              "c0": 0,
+              "c1": 0,
+              "c2": 0,
+              "c3": 0.10000000149011612
+            }
+          },
+          "svgStdDeviation": 10,
+          "sourcePhotoBytesPreserved": true
+        }
+      ]
+    }
+  ]
+}

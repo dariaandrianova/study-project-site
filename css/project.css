@@ -1,0 +1,162 @@
+/* ========================================================
+   03 / ПРОЕКТ — локальная сетка, без изменений других разделов
+   ======================================================== */
+.project-layout {
+  display: grid;
+  /* NSM чуть шире рекомендованных 23%, чтобы не заужать описание. */
+  grid-template-columns: minmax(0, 40fr) minmax(0, 26fr) minmax(0, 34fr);
+  gap: var(--space-module);
+  align-items: stretch;
+}
+.project-layout > * { min-width: 0; }
+.project-concept { grid-column: 1; grid-row: 1; }
+.project-nsm { grid-column: 2; grid-row: 1; }
+.project-scenarios { grid-column: 3; grid-row: 1; }
+.project-system-row {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: var(--space-module);
+  align-items: stretch;
+}
+.project-system-row > .tile { min-width: 0; }
+.project-concept > p:not(.eyebrow) { max-width: 72ch; color: var(--muted); }
+.project-nsm__accent {
+  margin-bottom: var(--space-related);
+  font-family: var(--font-heading);
+  font-size: var(--text-nsm);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--interactive);
+}
+.project-nsm > h3 + p { max-width: 64ch; color: var(--muted); }
+/* СЦЕНАРИИ — высота ограничена только у превью, не у карточки.
+   Корпус телефона уже присутствует в самих роликах; видео не обрезаем. */
+.project-prototype {
+  --project-preview-height: 320px;
+  width: 100%;
+  max-width: 288px;
+  margin: var(--space-group) auto 0;
+  background: transparent;
+}
+.project-prototype__screen {
+  width: min(100%, calc(var(--project-preview-height) * 393 / 852));
+  aspect-ratio: 393 / 852;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-inner);
+  background: #F7F6F4;
+}
+.project-prototype video { display: block; width: 100%; height: 100%; object-fit: contain; transition: opacity 160ms ease; }
+.project-prototype video.is-switching { opacity: 0; }
+.project-prototype__navigation { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 4px; margin-top: 12px; }
+.project-prototype__navigation span { text-align: center; font-size: var(--text-caption); line-height: 1.4; overflow-wrap: normal; }
+.project-prototype__navigation button {
+  display: grid; place-items: center; width: 44px; height: 44px; padding: 8px;
+  border: 0; border-radius: 16px; background: transparent; color: var(--text); cursor: pointer;
+  transition: background-color 200ms ease;
+}
+.project-prototype__navigation button:hover { background: #E8E2FE; }
+.project-prototype__navigation button:active { background: #CDC3FD; }
+.project-prototype__navigation img { display: block; }
+.project-video-message { margin-top: 12px; font-size: var(--text-caption); color: var(--muted); }
+
+/* ПАЛИТРА ПРИЛОЖЕНИЯ — данные в project.js, не меняют токены портфолио. */
+.project-color-scales { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 480px; margin-top: var(--space-group); }
+.project-palette > h3 + p { color: var(--muted); }
+.project-color-scale { min-width: 0; }
+.project-color-scale h4 { margin: 0 0 var(--space-related); font-size: var(--text-caption); color: var(--muted); font-weight: 500; }
+.project-color-scale__swatches { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 4px; margin: 0; padding: 0; list-style: none; }
+.project-color-scale__swatches li { aspect-ratio: 1; border-radius: 4px; background: var(--swatch); }
+.project-color-scale:last-child .project-color-scale__swatches { grid-template-columns: repeat(5, minmax(0, 1fr)); width: calc(50% - 2px); }
+
+/* ДИЗАЙН-СИСТЕМА — оригинальные семейства в компактной витрине.
+   Коэффициент 5/8 — около 71% прежнего презентационного масштаба 7/8.
+   Ни высота карточек, ни высота SVG не фиксируются и не обрезаются. */
+.project-design-system > h3 + p { color: var(--muted); }
+.project-showcase--compact { --kit-scale: .625; display: grid; gap: 12px; width: fit-content; max-width: 100%; margin-top: var(--space-group); }
+.project-kit-zone { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-related); min-width: 0; }
+.project-kit-zone > figcaption { color: var(--muted); font-size: var(--text-caption); line-height: 1.4; }
+.project-kit-surface { display: grid; justify-items: center; width: fit-content; max-width: 100%; padding: 8px; border-radius: var(--radius-inner); background: #F7F6F4; }
+.project-showcase--compact > .project-kit-zone > .project-kit-surface { width: calc(393px * var(--kit-scale) + 16px); }
+.project-kit-component { display: block; width: min(100%, calc(var(--kit-native-width) * var(--kit-scale))); max-width: 100%; height: auto; object-fit: contain; }
+.project-kit-controls { display: grid; grid-template-columns: minmax(0, max-content) max-content; gap: var(--space-items); align-items: start; }
+.project-kit-button-states { width: calc(373.33334px * var(--kit-scale) + 16px); gap: 8px; }
+.project-kit-circle-surface { align-items: center; }
+.project-kit-circle-states { display: grid; grid-template-columns: repeat(2, max-content); gap: 8px 12px; }
+.project-kit-circle-states img { display: block; width: calc(32px * var(--kit-scale)); height: auto; }
+
+/* Горизонтальная витрина без подписей и подложек: SVG сохраняют оригиналы.
+   Палитра компактнее; обе карточки растягиваются до общей естественной высоты. */
+.project-design-system { container: project-kit / inline-size; }
+.project-showcase--horizontal { width: 100%; grid-template-columns: minmax(0, 35fr) minmax(0, 35fr) minmax(0, 30fr); gap: 12px; align-items: start; overflow: visible; }
+.project-kit-group { min-width: 0; display: grid; align-content: start; gap: 12px; padding: 0; background: transparent; overflow: visible; }
+.project-kit-group__content { display: grid; gap: 12px; }
+.project-showcase--horizontal .project-kit-zone { align-items: stretch; }
+.project-showcase--horizontal .project-kit-surface { width: 100%; padding: 0; background: transparent; }
+.project-showcase--horizontal .project-kit-group--ticket { --kit-scale: .625; }
+.project-showcase--horizontal .project-kit-group--navigation { --kit-scale: .625; }
+.project-showcase--horizontal .project-kit-group--buttons { --kit-scale: .625; }
+.project-showcase--horizontal .project-kit-ticket > img { align-self: center; margin-inline: auto; box-shadow: none; filter: none; }
+.project-showcase--horizontal .project-kit-component { margin-inline: auto; }
+.project-showcase--horizontal .project-kit-controls { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+.project-showcase--horizontal .project-kit-button-states { gap: 8px; }
+.project-showcase--horizontal .project-kit-circle-states { justify-content: center; }
+@container project-kit (max-width: 600px) {
+  .project-showcase--horizontal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-kit-group--buttons { grid-column: 1 / -1; }
+  .project-showcase--horizontal .project-kit-controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* МЕТРИКИ — оболочка общая с исследовательскими модальными окнами. */
+.project-metrics-content h3 { margin-bottom: var(--space-items); }
+.project-metrics-table { width: 100%; border-collapse: collapse; text-align: left; }
+.project-metrics-table th, .project-metrics-table td { padding: 16px 0; vertical-align: top; border-bottom: 1px solid var(--line); }
+.project-metrics-table th:first-child { width: 32%; padding-right: 24px; font-weight: 600; }
+.project-metrics-table thead th { color: var(--muted); font-size: var(--text-caption); font-weight: 500; }
+.project-metrics-table td { color: var(--muted); }
+.project-metrics-future { margin-top: 40px; }
+.project-metrics-future > div + div { margin-top: 24px; }
+.project-metrics-future h4 { margin: 4px 0 8px; font-size: var(--text-body); font-weight: 600; }
+
+@media (max-width: 1100px) {
+  .project-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-concept { grid-column: 1; grid-row: 1; }
+  .project-nsm { grid-column: 2; grid-row: 1; }
+  .project-scenarios {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 288px);
+    grid-template-rows: min-content 1fr;
+    column-gap: var(--space-group);
+    align-items: start;
+  }
+  .project-scenarios > .eyebrow { grid-column: 1; grid-row: 1; }
+  .project-scenarios > h3 { grid-column: 1; grid-row: 2; }
+  .project-scenarios > .project-prototype { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
+  .project-system-row { grid-column: 1 / -1; grid-row: 3; grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .project-layout { grid-template-columns: minmax(0, 1fr); }
+  .project-layout > * { grid-column: 1; grid-row: auto; }
+  .project-scenarios { display: block; }
+  .project-scenarios > .project-prototype { margin: var(--space-group) auto 0; }
+}
+@media (max-width: 760px) {
+  .project-showcase--horizontal { grid-template-columns: minmax(0, 1fr); }
+  .project-kit-group--buttons { grid-column: 1; }
+  .project-showcase--horizontal .project-kit-controls { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .project-kit-controls { grid-template-columns: minmax(0, 1fr); }
+  .project-metrics-table, .project-metrics-table tbody, .project-metrics-table tr, .project-metrics-table th, .project-metrics-table td { display: block; width: 100%; }
+  .project-metrics-table thead { display: none; }
+  .project-metrics-table tbody tr { padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .project-metrics-table th:first-child { width: 100%; padding: 0 0 8px; border: 0; }
+  .project-metrics-table td { padding: 0; border: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-prototype video, .project-prototype__navigation button { transition: none; }
+}

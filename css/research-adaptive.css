@@ -1,0 +1,29 @@
+/* Адаптивные группы скрыты на desktop; исходные табы не перестраиваем. */
+.research-adaptive { display: none; }
+.research-topic-sheet .research-panel { min-width: 0; }
+.research-topic-sheet .tile:not(.tile--dark) { padding: 0; border-radius: 0; background: transparent; }
+.research-topic-sheet .tile--dark { padding: var(--space-items); }
+.research-topic-sheet .modal-action-footer:has(> .research-inline-material) { border-top: 0; padding-top: 0; }
+.research-inline-material { margin-top: var(--space-items); padding-top: var(--space-items); }
+.research-inline-material > summary { font-size: var(--text-body); font-weight: 600; }
+.research-inline-material__body { margin-top: var(--space-items); }
+.research-inline-description { margin-bottom: var(--space-items); color: var(--muted); }
+.research-inline-material .hypotheses-modal__list { margin: 0; }
+.research-vpc-details { display: grid; gap: var(--space-group); margin-top: var(--space-group); }
+.research-vpc-details__group > h3 { font-size: var(--text-title); }
+.research-vpc-details details p { margin-top: var(--space-copy); color: var(--muted); }
+@media (max-width: 1024px) {
+  #research.research-has-adaptive > .research-tabs { display: none; }
+  .research-adaptive:not([hidden]) { display: grid; gap: var(--space-items); }
+  #research.research-has-adaptive > .section-heading { grid-template-columns: minmax(0, 1fr); }
+  .research-accordion { margin: 0; padding: 0; border: 0; border-radius: var(--radius); background: var(--surface); min-width: 0; }
+  .research-accordion > summary { padding: var(--space-items); font-size: var(--text-body); line-height: 1.4; font-weight: 600; }
+  .research-accordion__topics { display: grid; gap: var(--space-copy); padding: 0 var(--space-items) var(--space-items); }
+  .research-summary-module { display: flex; flex-direction: column; min-width: 0; padding: var(--space-items); border-radius: var(--radius-inner); background: var(--research-card-neutral); }
+  .research-summary-module > h3 { font-size: var(--text-body); line-height: 1.3; }
+  .research-summary-module > p { margin-top: var(--space-related); color: var(--muted); }
+  .research-summary-module > .modal-action-footer { margin-top: var(--space-items); padding-top: var(--space-related); }
+  .research-summary-module .modal-action-button { align-self: start; width: max-content; }
+  .research-topic-sheet .competitors-table tbody th:first-child { width: auto; }
+  .research-topic-sheet .hypotheses-modal__panel { max-height: min(800px, 90dvh); }
+}

@@ -1,0 +1,24 @@
+/* О КУРСЕ: исходная Bento-сетка остаётся desktop-версией и источником данных. */
+.course-adaptive { display: none; }
+.course-details-group + .course-details-group { margin-top: var(--space-group); padding-top: var(--space-group); border-top: 1px solid var(--line); }
+.course-details-group > .eyebrow { margin-bottom: var(--space-related); }
+.course-details-group > h3 + p { margin-top: var(--space-copy); }
+.course-details-group > p:not(.eyebrow) { color: var(--muted); }
+.course-details-group .tags { margin-top: var(--space-items); }
+.course-details-role { margin-top: var(--space-items); }
+.course-details-role h4 { margin: 0 0 var(--space-related); font-size: var(--text-body); font-weight: 600; }
+.course-details-role p { color: var(--muted); }
+.course-details-handle { display: none; }
+@media (max-width: 1024px) {
+  #course.course-has-adaptive > .section-heading { grid-template-columns: minmax(0, 1fr); }
+  #course.course-has-adaptive > .course-grid { display: none; }
+  .course-adaptive:not([hidden]) { display: block; }
+  .course-summary-card { padding: var(--space-group); }
+  .course-summary-card > p:not(.eyebrow) { color: var(--muted); }
+  #course .course-summary-card > .tags { margin: var(--space-items) 0; padding: 0; }
+  .course-summary-card > .modal-action-footer { margin-top: auto; }
+  .course-details-modal .hypotheses-modal__panel { max-height: min(800px, 90dvh); }
+}
+@media (max-width: 767px) {
+  .course-summary-card { padding: var(--space-items); }
+}

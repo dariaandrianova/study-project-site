@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Командный учебный проект: от идеи и интервью до сервиса поездок на события. Исследования, интерфейсы и личные выводы.">
+    <title>За пределами привычных задач — учебный проект</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/errors.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/sheets.css">
+    <link rel="stylesheet" href="css/research-adaptive.css">
+    <link rel="stylesheet" href="css/project-adaptive.css">
+    <script src="js/typography.js" defer></script>
+    <script src="js/errors.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/hypotheses-modal.js" defer></script>
+    <script src="js/interview-guide.js" defer></script>
+    <script src="js/validation-matrix.js" defer></script>
+    <script src="js/job-stories.js" defer></script>
+    <script src="js/value-proposition.js" defer></script>
+    <script src="js/mvp.js" defer></script>
+    <script src="js/tone-of-voice.js" defer></script>
+    <script src="js/modal-dialog.js" defer></script>
+    <script src="js/course.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/project-adaptive.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/research-adaptive.js" defer></script>
+    <script src="js/sheets.js" defer></script>
+    <script src="js/team.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <main id="main" tabindex="-1">
+      <!-- 02. HERO — свободная композиция из четырёх карточек -->
+      <section class="hero container" id="top" aria-labelledby="hero-title" tabindex="-1">
+        <div class="hero__intro">
+          <p class="eyebrow">Кейс · Повышение квалификации</p>
+          <h1 id="hero-title">За пределами <br class="heading-break">привычных задач</h1>
+          <p class="hero__subtitle">Новый продукт, новая команда и опыт, который помог<br class="desktop-break"> по-новому взглянуть на привычную работу</p>
+        </div>
+        <nav id="hero-cards" class="hero-cards" aria-label="Что внутри кейса"></nav>
+        <noscript>
+          <p>Разделы кейса: <a href="#course">О курсе</a>, <a href="#research">Исследования</a>, <a href="#project">Проект</a>, <a href="#team">Команда</a>, <a href="#insights">Выводы</a>. Карточки доступны при включённом JavaScript.</p>
+        </noscript>
+      </section>
+      <!-- ШАБЛОН HERO — содержание берётся из heroCards в js/script.js -->
+      <template id="hero-card-template">
+        <a class="hero-card">
+          <img class="hero-card__image" src="assets/images/placeholder.svg" alt="" width="640" height="480">
+          <span class="hero-card__shade" aria-hidden="true"></span>
+          <!-- Иконки сайта: локальные SVG из assets/icons/ -->
+          <span class="hero-card__arrow" aria-hidden="true">
+            <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24">
+          </span>
+          <span class="hero-card__copy">
+            <span class="hero-card__title"></span>
+            <span class="hero-card__description"></span>
+          </span>
+        </a>
+      </template>
+      <!-- 03. О КУРСЕ — контекст, требования и командная работа -->
+      <section class="case-section container" id="course" aria-labelledby="course-title" tabindex="-1">
+        <div class="section-heading">
+          <p class="eyebrow">01 / О курсе</p>
+          <h2 id="course-title">Знакомая профессия. <br class="heading-break">Новый угол зрения</h2>
+          <p>Командный проект в рамках программы повышения квалификации для дизайнеров Сбера. Возможность пройти весь продуктовый путь за пределами повседневных задач</p>
+        </div>
+        <div class="course-grid">
+          <article class="tile tile--sage course-focus">
+            <p class="eyebrow">Главный фокус</p>
+            <h3>Думать шире интерфейса</h3>
+            <p>Понять потребность, проверить предположения и объяснить, почему продукт должен работать именно так</p>
+            <!-- Иллюстрация заполняет свободную область; скрыта до 1024 px включительно. -->
+            <div class="course-focus__illustration" aria-hidden="true">
+              <img src="assets/images/about-course-focus.png.png" width="1254" height="1254" alt="" loading="lazy">
+            </div>
+            <div class="tags" aria-label="Темы курса">
+              <span>JTBD</span>
+              <span>CJM</span>
+              <span>Метрики</span>
+              <span>Дизайн-система</span>
+            </div>
+          </article>
+          <article class="tile course-format">
+            <p class="eyebrow">Формат</p>
+            <h3>Теория → практика → защита</h3>
+            <p>Лекции и воркшопы с экспертами, командные задания, работа с кураторами и итоговый проект. Всё параллельно с основной работой</p>
+            <div class="tags" aria-label="Формат обучения">
+              <span>04.06–22.10.2026</span>
+              <span>С кураторами</span>
+              <span>От идеи до прототипа</span>
+              <span>Повышение квалификации</span>
+            </div>
+          </article>
+          <article class="tile tile--dark course-team">
+            <div class="course-team__label">
+              <p class="eyebrow">Команда</p>
+              <button class="course-role-button" type="button" aria-label="Моя роль в командной работе" aria-expanded="false" aria-controls="course-role-popover">
+                <img src="assets/icons/information-circle-contained.svg" alt="" width="24" height="24">
+              </button>
+            </div>
+            <h3>Договариваться и делать сообща</h3>
+            <p>Встречи после работы, разные взгляды на задачу и общие решения. Учились не&nbsp;только проектировать, но&nbsp;и&nbsp;слышать друг друга</p>
+            <!-- Иллюстрация занимает только свободное место под текстом. -->
+            <div class="course-team__illustration" aria-hidden="true">
+              <img src="assets/images/about-course-team.png" width="2172" height="724" alt="" loading="lazy">
+            </div>
+            <!-- Компактное пояснение роли: закрытие снаружи, по Escape и кнопке. -->
+            <div class="course-role-popover" id="course-role-popover" role="region" aria-labelledby="course-role-title" hidden>
+              <h3 id="course-role-title">Формальная роль — методолог</h3>
+              <p>На старте обучения мы распределили роли, но на практике работали совместно над всеми этапами: исследованиями, продуктовой логикой, интерфейсами и подготовкой защиты</p>
+            </div>
+          </article>
+          <article class="tile course-requirements">
+            <p class="eyebrow">Что требовалось</p>
+            <h3>Обосновать весь путь</h3>
+            <ul class="plain-list">
+              <li>Выбрать идею и исследовать потребность</li>
+              <li>Сформировать сценарии и метрики</li>
+              <li>Собрать интерфейсы и дизайн-систему</li>
+              <li>Представить решение на защите</li>
+            </ul>
+            <div class="tags" aria-label="Этапы работы над проектом">
+              <span>Discovery</span>
+              <span>Product Strategy</span>
+              <span>UX/UI</span>
+              <span>Pitch</span>
+            </div>
+          </article>
+          <article class="tile course-motivation">
+            <p class="eyebrow">Личная мотивация</p>
+            <h3>Выйти из привычного контекста</h3>
+            <p>Не ждала от курса каких-то откровений. Хотелось переключиться с повседневных рабочих задач на другой продукт, посмотреть на знакомые процессы свежим взглядом и заодно получить официальное удостоверение о повышении квалификации</p>
+            <div class="tags" aria-label="Личная мотивация">
+              <span>Новый контекст</span>
+              <span>Свежий взгляд</span>
+              <span>Повышение квалификации</span>
+            </div>
+          </article>
+        </div>
+        <!-- Краткое адаптивное введение; подробности — из исходной .course-grid. -->
+        <div class="course-adaptive" hidden>
+          <article class="tile tile--modal-action course-summary-card">
+            <p class="eyebrow">Главное</p>
+            <h3>От&nbsp;идеи до&nbsp;защиты продукта</h3>
+            <p>Прошли полный продуктовый цикл: исследования, гипотезы, сценарии, интерфейсы и&nbsp;метрики. Работали в&nbsp;новой команде параллельно с&nbsp;основными задачами</p>
+            <div class="tags" aria-label="Главное о курсе"><span>4&nbsp;модуля</span><span>Командный проект</span><span>Итоговая защита</span></div>
+            <div class="modal-action-footer">
+              <button class="modal-action-button course-details-open" type="button" aria-haspopup="dialog" aria-controls="course-details-modal">Подробнее <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24"></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 04. ИССЛЕДОВАНИЯ — изменение гипотез после интервью -->
+      <section class="case-section container" id="research" data-typography="research" aria-labelledby="research-title" tabindex="-1">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Исследования</p>
+          <h2 id="research-title">Сначала спросить <br class="heading-break">Потом проектировать</h2>
+          <p>Начали с&nbsp;гипотез о&nbsp;поездках на&nbsp;события. Интервью с&nbsp;реальными людьми помогли отделить наши представления от&nbsp;их опыта</p>
+        </div>
+        <!-- ТАБЫ ИССЛЕДОВАНИЯ: названия кнопок и содержимое панелей редактируются здесь. -->
+        <div class="research-tabs">
+          <div class="research-tabs__navigation">
+            <div class="research-tabs__list" id="research-tablist" role="tablist" aria-label="Этапы исследования" aria-orientation="horizontal">
+              <button class="research-tab" id="research-tab-ideas" type="button" role="tab" aria-selected="true" aria-controls="research-panel-ideas" tabindex="0" data-tab-label="Генерация идей">Генерация идей</button>
+              <button class="research-tab" id="research-tab-audience" type="button" role="tab" aria-selected="false" aria-controls="research-panel-audience" tabindex="-1" data-tab-label="Целевая аудитория">Целевая аудитория</button>
+              <button class="research-tab" id="research-tab-competitors" type="button" role="tab" aria-selected="false" aria-controls="research-panel-competitors" tabindex="-1" data-tab-label="Конкуренты">Конкуренты</button>
+              <button class="research-tab" id="research-tab-hypotheses" type="button" role="tab" aria-selected="false" aria-controls="research-panel-hypotheses" tabindex="-1" data-tab-label="Формирование гипотез">Формирование гипотез</button>
+              <button class="research-tab" id="research-tab-interviews" type="button" role="tab" aria-selected="false" aria-controls="research-panel-interviews" tabindex="-1" data-tab-label="Интервью">Интервью</button>
+              <button class="research-tab" id="research-tab-validation" type="button" role="tab" aria-selected="false" aria-controls="research-panel-validation" tabindex="-1" data-tab-label="Проверка гипотез">Проверка гипотез</button>
+              <button class="research-tab" id="research-tab-job-stories" type="button" role="tab" aria-selected="false" aria-controls="research-panel-job-stories" tabindex="-1" data-tab-label="Job Stories">Job Stories</button>
+              <button class="research-tab" id="research-tab-value-proposition" type="button" role="tab" aria-selected="false" aria-controls="research-panel-value-proposition" tabindex="-1" data-tab-label="Value Proposition">Value Proposition</button>
+              <button class="research-tab" id="research-tab-mvp" type="button" role="tab" aria-selected="false" aria-controls="research-panel-mvp" tabindex="-1" data-tab-label="MVP">MVP</button>
+              <button class="research-tab" id="research-tab-tone-of-voice" type="button" role="tab" aria-selected="false" aria-controls="research-panel-tone-of-voice" tabindex="-1" data-tab-label="Tone of Voice">Tone of Voice</button>
+            </div>
+          </div>
+          <div class="research-tabs__panels">
+            <!-- ЭТАП 01: ГЕНЕРАЦИЯ ИДЕЙ. Все тексты и пути к иконкам — внутри карточек ниже. -->
+            <section class="research-panel ideas-panel" id="research-panel-ideas" role="tabpanel" aria-labelledby="research-tab-ideas" tabindex="0">
+              <div class="ideas-grid">
+                <!-- ВВОДНЫЙ МОДУЛЬ. Точка A — начало пути. -->
+                <article class="tile ideas-intro">
+                  <div class="ideas-intro__copy">
+                    <p class="eyebrow">Отбор идей</p>
+                    <h3>С&nbsp;чего всё начиналось</h3>
+                    <p>До&nbsp;исследований мы&nbsp;собрали несколько идей для&nbsp;будущего продукта. Каждую предложили на&nbsp;общее обсуждение, сравнили направления и&nbsp;выбрали одну для&nbsp;дальнейшей работы</p>
+                  </div>
+                  <div class="ideas-intro__visual" aria-hidden="true">
+                    <img src="assets/images/research-point-a.png" width="2172" height="724" alt="" loading="lazy">
+                  </div>
+                </article>
+
+                <!-- ИДЕЯ 01 / EDTECH. Иконка пока не указана. -->
+                <article class="tile idea-card">
+                  <div class="idea-card__top">
+                    <p class="eyebrow">01 / EDTECH</p>
+                    <span class="idea-card__icon" aria-hidden="true"><!-- Здесь будет иконка. --></span>
+                  </div>
+                  <h3>ИИ-репетитор</h3>
+                  <p>Персональный помощник для&nbsp;подготовки к&nbsp;экзаменам и&nbsp;сертификациям. Адаптирует программу, объясняет ошибки и&nbsp;отслеживает прогресс</p>
+                </article>
+
+                <!-- ИДЕЯ 03 / LIFESTYLE -->
+                <article class="tile idea-card">
+                  <div class="idea-card__top">
+                    <p class="eyebrow">03 / LIFESTYLE</p>
+                    <img class="idea-card__icon" src="assets/icons/graduation-cap-02.svg" alt="" width="24" height="24" loading="lazy">
+                  </div>
+                  <h3>Умный гардероб</h3>
+                  <p>Цифровой шкаф, который помогает собирать образы с&nbsp;учётом погоды, планов и&nbsp;личных предпочтений</p>
+                </article>
+
+                <!-- ИДЕЯ 04 / HOME -->
+                <article class="tile idea-card">
+                  <div class="idea-card__top">
+                    <p class="eyebrow">04 / HOME</p>
+                    <img class="idea-card__icon" src="assets/icons/home-03.svg" alt="" width="24" height="24" loading="lazy">
+                  </div>
+                  <h3>Помощник по&nbsp;ремонту</h3>
+                  <p>Планирование ремонта, AR-примерка интерьера, расчёт бюджета и&nbsp;поиск специалистов в&nbsp;одном сервисе</p>
+                </article>
+
+                <!-- ИДЕЯ 05 / CULTURE & AR -->
+                <article class="tile idea-card">
+                  <div class="idea-card__top">
+                    <p class="eyebrow">05 / CULTURE &amp; AR</p>
+                    <img class="idea-card__icon" src="assets/icons/map-01.svg" alt="" width="24" height="24" loading="lazy">
+                  </div>
+                  <h3>«Слои»&nbsp;— культура города в&nbsp;AR</h3>
+                  <p>Цифровые истории и&nbsp;арт-объекты, привязанные к&nbsp;реальным городским локациям, которые можно открывать и&nbsp;создавать</p>
+                </article>
+
+                <!-- ВЫБРАННАЯ ИДЕЯ 06 / EVENT TRAVEL -->
+                <article class="tile tile--dark idea-selected">
+                  <div class="idea-selected__top">
+                    <p class="eyebrow">06 / EVENT TRAVEL</p>
+                    <span class="idea-selected__badge">
+                      <!-- SVG галочки добавим, когда будет указан файл из assets/icons. -->
+                      Выбрали
+                    </span>
+                  </div>
+                  <!-- Точка B — выбранное направление; нижние блоки остаются отдельно. -->
+                  <div class="idea-selected__body">
+                    <div class="idea-selected__copy">
+                      <h3 class="idea-selected__title">Event First</h3>
+                      <p class="idea-selected__subtitle">Путешествие начинается с&nbsp;события, а&nbsp;не&nbsp;с направления</p>
+                      <p class="idea-selected__description">Пользователь выбирает концерт, матч или&nbsp;фестиваль, а&nbsp;сервис помогает собрать вокруг него поездку: билеты, дорогу, проживание и&nbsp;логистику</p>
+                    </div>
+                    <div class="idea-selected__visual" aria-hidden="true">
+                      <img src="assets/images/research-point-b.png" width="1942" height="809" alt="" loading="lazy">
+                    </div>
+                  </div>
+                  <div class="idea-selected__reasons">
+                    <div>
+                      <h4>Почему выбрали</h4>
+                      <p>Идея объединила событийную и&nbsp;travel-тематику, позволяла исследовать понятный сценарий и&nbsp;проектировать комплексное решение</p>
+                    </div>
+                    <div>
+                      <h4>Как&nbsp;принимали решение</h4>
+                      <p>Каждый заранее подготовил идеи. Затем созвонились, обсудили предложения и&nbsp;единогласно остановились на&nbsp;Event First</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <!-- ЭТАП 02: ЦЕЛЕВАЯ АУДИТОРИЯ. Три вводных модуля и итоговый ряд 60/40. -->
+            <section class="research-panel audience-panel audience-panel--three-across" id="research-panel-audience" role="tabpanel" aria-labelledby="research-tab-audience" tabindex="0" hidden>
+              <div class="audience-grid">
+                <!-- РЯД 01. Аудитория: текст слева, место для иллюстрации справа. -->
+                <article class="tile audience-intro audience-wide">
+                  <div>
+                    <p class="eyebrow">01 / Аудитория</p>
+                    <h3>Событие как&nbsp;повод для&nbsp;поездки</h3>
+                    <p>Люди, которые готовы отправиться в&nbsp;другой город ради концерта, фестиваля, спортивного матча или&nbsp;другого значимого события</p>
+                  </div>
+                  <div class="audience-intro__visual" aria-hidden="true">
+                    <!-- Место для будущей иллюстрации. -->
+                  </div>
+                </article>
+
+                <!-- РЯД 02. Два равных модуля: сегмент и триггер. -->
+                <article class="tile audience-segment">
+                  <p class="eyebrow">Основной сегмент&nbsp;— гипотеза</p>
+                  <h3>18–35&nbsp;лет</h3>
+                  <p>Жители России, которые рассматривают события как&nbsp;повод путешествовать</p>
+                </article>
+                <article class="tile audience-trigger">
+                  <p class="eyebrow">Ключевой триггер</p>
+                  <h3>Концерт, матч, фестиваль</h3>
+                  <p>Сначала возникает желание посетить событие, затем необходимость организовать поездку</p>
+                </article>
+
+                <!-- ИТОГОВЫЙ РЯД. Потребности и сложности (60%) + продуктовая гипотеза (40%). -->
+                <article class="tile audience-needs audience-wide">
+                  <p class="eyebrow">02 / Потребности и&nbsp;сложности</p>
+                  <div class="audience-needs__columns">
+                    <div>
+                      <h3>Что&nbsp;важно</h3>
+                      <p>Удобные даты, понятная стоимость, подходящее жильё и&nbsp;возможность самостоятельно выбирать компоненты поездки</p>
+                    </div>
+                    <div>
+                      <h3>Что&nbsp;мешает</h3>
+                      <p>Информация разбросана по&nbsp;сервисам, сложно сопоставлять варианты и&nbsp;удерживать общий план поездки</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Продуктовая гипотеза — тёмный модуль справа в итоговом ряду. -->
+                <article class="tile tile--dark audience-hypothesis audience-wide">
+                  <p class="eyebrow">03 / Продуктовая гипотеза</p>
+                  <h3>Не&nbsp;выбирать между готовым пакетом и&nbsp;ручной сборкой</h3>
+                  <p>Дать пользователю отправную точку&nbsp;— событие&nbsp;— и&nbsp;возможность гибко собрать поездку под&nbsp;свои условия</p>
+                </article>
+              </div>
+            </section>
+            <!-- ЭТАП 03: КОНКУРЕНТЫ. Контекст рынка и единая таблица альтернатив. -->
+            <section class="research-panel competitors-panel" id="research-panel-competitors" role="tabpanel" aria-labelledby="research-tab-competitors" tabindex="0" hidden>
+              <div class="competitors-modules">
+                <!-- 01. КОНТЕКСТ РЫНКА -->
+                <article class="tile competitors-context">
+                  <p class="eyebrow">01 / Контекст рынка</p>
+                  <h3>Рынок закрывает части. Но&nbsp;не&nbsp;весь сценарий</h3>
+                  <p>Пользователь может отдельно найти событие, купить билет, забронировать дорогу и&nbsp;жильё. Мы&nbsp;изучили существующие альтернативы и&nbsp;посмотрели, насколько они помогают организовать поездку вокруг конкретного события</p>
+                </article>
+                <!-- 02. СРАВНЕНИЕ АЛЬТЕРНАТИВ. Каждая строка редактируется в tbody. -->
+                <article class="tile competitors-comparison">
+                  <p class="eyebrow">02 / Сравнение альтернатив</p>
+                  <h3 id="competitors-comparison-title">Что&nbsp;предлагают существующие решения</h3>
+                  <table class="competitors-table" role="table" aria-labelledby="competitors-comparison-title">
+                    <thead role="rowgroup">
+                      <tr role="row">
+                        <th scope="col" role="columnheader">Категория и&nbsp;сервисы</th>
+                        <th scope="col" role="columnheader">Что&nbsp;предлагают</th>
+                        <th scope="col" role="columnheader">Ограничения</th>
+                      </tr>
+                    </thead>
+                    <tbody role="rowgroup">
+                      <tr role="row">
+                        <th scope="row" role="rowheader">
+                          <span class="competitors-table__category">Билетные агрегаторы</span>
+                          <span class="competitors-table__examples">Яндекс Афиша, Kassir</span>
+                        </th>
+                        <td role="cell">Продажа билетов на&nbsp;события</td>
+                        <td role="cell">
+                          <div class="competitors-table__limitation">
+                            <span class="competitors-table__cross" aria-hidden="true">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" focusable="false">
+                                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                              </svg>
+                            </span>
+                            <span>Не&nbsp;планируют дорогу и&nbsp;жильё</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">
+                          <span class="competitors-table__category">Тревел-агрегаторы</span>
+                          <span class="competitors-table__examples">Aviasales, Островок, Суточно</span>
+                        </th>
+                        <td role="cell">Поиск дороги и&nbsp;жилья</td>
+                        <td role="cell">
+                          <div class="competitors-table__limitation">
+                            <span class="competitors-table__cross" aria-hidden="true">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" focusable="false">
+                                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                              </svg>
+                            </span>
+                            <span>Не&nbsp;привязаны к&nbsp;конкретному событию</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">
+                          <span class="competitors-table__category">Готовые event-туры</span>
+                          <span class="competitors-table__examples">vibee, on location</span>
+                        </th>
+                        <td role="cell">Готовые пакеты на&nbsp;популярные события</td>
+                        <td role="cell">
+                          <div class="competitors-table__limitation">
+                            <span class="competitors-table__cross" aria-hidden="true">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" focusable="false">
+                                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                              </svg>
+                            </span>
+                            <span>Высокая цена и&nbsp;ограниченный выбор</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">
+                          <span class="competitors-table__category">Друзья и&nbsp;сообщества</span>
+                          <span class="competitors-table__examples">Telegram, Discord</span>
+                        </th>
+                        <td role="cell">Советы, опыт, совместные поездки</td>
+                        <td role="cell">
+                          <div class="competitors-table__limitation">
+                            <span class="competitors-table__cross" aria-hidden="true">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" focusable="false">
+                                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                              </svg>
+                            </span>
+                            <span>Нет единого процесса организации</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr role="row">
+                        <th scope="row" role="rowheader">
+                          <span class="competitors-table__category">ИИ-планировщики</span>
+                          <span class="competitors-table__examples">GPT, Layla</span>
+                        </th>
+                        <td role="cell">Маршруты и&nbsp;рекомендации</td>
+                        <td role="cell">
+                          <div class="competitors-table__limitation">
+                            <span class="competitors-table__cross" aria-hidden="true">
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" focusable="false">
+                                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                              </svg>
+                            </span>
+                            <span>Не&nbsp;специализируются на&nbsp;event-поездках</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </article>
+              </div>
+            </section>
+            <!-- ЭТАП 04: ФОРМИРОВАНИЕ ГИПОТЕЗ. Тексты и направления редактируются здесь. -->
+            <section class="research-panel hypotheses-panel" id="research-panel-hypotheses" role="tabpanel" aria-labelledby="research-tab-hypotheses" tabindex="0" hidden>
+              <div class="hypotheses-modules">
+                <!-- 01. ПОДХОД: текст слева, место для будущей иллюстрации справа. -->
+                <article class="tile hypotheses-approach">
+                  <div>
+                    <p class="eyebrow">01 / Подход</p>
+                    <h3>От&nbsp;предположений&nbsp;— к&nbsp;вопросам</h3>
+                    <p>До&nbsp;интервью мы&nbsp;сформулировали гипотезы о&nbsp;том, как&nbsp;люди организуют поездки на&nbsp;события: от&nbsp;выбора мероприятия до&nbsp;возвращения домой. Хотели проверить реальные привычки, сложности и&nbsp;потребности пользователей</p>
+                  </div>
+                  <div class="hypotheses-approach__visual" aria-hidden="true">
+                    <!-- Здесь будет иллюстрация. Пока оставляем свободное пространство. -->
+                  </div>
+                </article>
+
+                <!-- НАПРАВЛЕНИЯ И ПОДГОТОВКА: 60/40 на desktop, вертикально на узких экранах. -->
+                <div class="hypotheses-summary-row">
+                  <!-- 02. НАПРАВЛЕНИЯ: один модуль, пять пунктов без отдельных подложек. -->
+                  <article class="tile hypotheses-directions tile--modal-action">
+                    <div class="hypotheses-directions__header">
+                      <p class="eyebrow">02 / Направления исследования</p>
+                      <div class="tags hypotheses-directions__count"><span data-hypotheses-total>27&nbsp;гипотез</span></div>
+                    </div>
+                    <ul class="hypotheses-directions__list">
+                      <li>
+                        <h4>Пользовательский путь</h4>
+                        <p>Как&nbsp;находят события, принимают решение и&nbsp;готовятся к&nbsp;поездке</p>
+                      </li>
+                      <li>
+                        <h4>Инструменты</h4>
+                        <p>Какими сервисами пользуются и&nbsp;где хранят информацию</p>
+                      </li>
+                      <li>
+                        <h4>Бюджет и&nbsp;выбор</h4>
+                        <p>Как&nbsp;оценивают расходы и&nbsp;балансируют цену с&nbsp;удобством</p>
+                      </li>
+                      <li>
+                        <h4>Сложности и&nbsp;риски</h4>
+                        <p>Что&nbsp;происходит при&nbsp;отменах, переносах и&nbsp;изменениях планов</p>
+                      </li>
+                      <li>
+                        <h4>Совместные поездки</h4>
+                        <p>Как&nbsp;договариваются, координируются и&nbsp;делят расходы</p>
+                      </li>
+                    </ul>
+                    <div class="hypotheses-directions__footer modal-action-footer">
+                      <button class="hypotheses-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="hypotheses-modal">Открыть все гипотезы <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24"></button>
+                    </div>
+                  </article>
+
+                  <!-- 03. ПОДГОТОВКА К ИНТЕРВЬЮ -->
+                  <article class="tile tile--dark hypotheses-interview">
+                    <p class="eyebrow">03 / Подготовка к&nbsp;интервью</p>
+                    <h3>Превратили гипотезы в&nbsp;исследовательские вопросы</h3>
+                    <p>Вместо прямых вопросов о&nbsp;желаемых функциях мы&nbsp;просили людей вспомнить конкретную поездку: как&nbsp;они её&nbsp;планировали, на&nbsp;что&nbsp;тратили время, какие решения принимали и&nbsp;что&nbsp;пошло не&nbsp;так</p>
+                    <div class="tags hypotheses-interview__tags" aria-label="Этапы интервью">
+                      <span>До&nbsp;поездки</span>
+                      <span>Во&nbsp;время события</span>
+                      <span>После поездки</span>
+                      <span>Нестандартные ситуации</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <!-- ЭТАП 05: ИНТЕРВЬЮ. Тексты модулей и истории редактируются здесь. -->
+            <section class="research-panel interviews-panel" id="research-panel-interviews" role="tabpanel" aria-labelledby="research-tab-interviews" tabindex="0" hidden>
+              <div class="interviews-modules">
+                <!-- 01–02. ПОДХОД И СЦЕНАРИЙ: 40/60 на desktop, без общей подложки. -->
+                <div class="interviews-intro-row">
+                  <article class="tile interviews-approach">
+                    <p class="eyebrow">01 / Подход</p>
+                    <h3>Узнать, как&nbsp;было. Не&nbsp;гадать, как&nbsp;могло быть</h3>
+                    <p>Разбирали реальные поездки: что&nbsp;люди делали, какие решения принимали и&nbsp;с&nbsp;какими трудностями сталкивались</p>
+                    <div class="tags">
+                      <span>Глубинные интервью</span>
+                      <span>≈&nbsp;50&nbsp;минут</span>
+                      <span>Реальный опыт</span>
+                    </div>
+                  </article>
+                  <article class="tile interviews-scenario tile--modal-action">
+                    <p class="eyebrow">02 / Сценарий интервью</p>
+                    <h3>От&nbsp;интереса к&nbsp;событию до&nbsp;возвращения домой</h3>
+                    <ul class="interviews-scenario__groups">
+                      <li>
+                        <h4>Начало поездки</h4>
+                        <p>Выбор события и&nbsp;первые действия</p>
+                      </li>
+                      <li>
+                        <h4>Подготовка</h4>
+                        <p>Сервисы, жильё, деньги и&nbsp;компания</p>
+                      </li>
+                      <li>
+                        <h4>День события</h4>
+                        <p>Дорога, площадка и&nbsp;непредвиденные ситуации</p>
+                      </li>
+                      <li>
+                        <h4>Рефлексия</h4>
+                        <p>Что&nbsp;получилось и&nbsp;что&nbsp;пошло не&nbsp;так</p>
+                      </li>
+                    </ul>
+                    <div class="interviews-guide-link modal-action-footer">
+                      <button class="interview-guide-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="interview-guide-modal">
+                        Открыть интервью-гайд
+                        <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24">
+                      </button>
+                    </div>
+                  </article>
+                </div>
+                <!-- 03. ИСТОРИИ: пересказы, без оформления как дословных цитат. -->
+                <article class="tile">
+                  <p class="eyebrow">03 / Истории пользователей</p>
+                  <h3>Билет купить легко. Всё остальное собирают вручную</h3>
+                  <p>Три реальные истории из&nbsp;наших интервью</p>
+                  <div class="interviews-stories">
+                    <article class="interviews-story">
+                      <!-- Уберите hidden и укажите src, когда изображение будет готово. -->
+                      <figure class="interviews-story__image" hidden><img alt="" width="800" height="600"></figure>
+                      <div class="interviews-story__body">
+                        <h4>Даша</h4><p class="interviews-story__event">UFC, Баку</p>
+                        <p>Заплатила 15&nbsp;000&nbsp;₽ за&nbsp;билеты номиналом 3&nbsp;000&nbsp;₽. Разницу оформили как&nbsp;невозвратный сбор</p>
+                        <p class="interviews-story__problem">Проблема: Непрозрачная стоимость</p>
+                      </div>
+                    </article>
+                    <article class="interviews-story">
+                      <figure class="interviews-story__image" hidden><img alt="" width="800" height="600"></figure>
+                      <div class="interviews-story__body">
+                        <h4>Илья</h4><p class="interviews-story__event">Концерт, Тбилиси</p>
+                        <p>После концерта не&nbsp;смог вызвать такси. Пришлось возвращаться домой пешком к&nbsp;пяти утра</p>
+                        <p class="interviews-story__problem">Проблема: Логистика дня события</p>
+                      </div>
+                    </article>
+                    <article class="interviews-story">
+                      <figure class="interviews-story__image" hidden><img alt="" width="800" height="600"></figure>
+                      <div class="interviews-story__body">
+                        <h4>Марина</h4><p class="interviews-story__event">Фестиваль</p>
+                        <p>Потратила около 10&nbsp;часов на&nbsp;поиск жилья рядом с&nbsp;площадкой. Столкнулась с&nbsp;ограниченным выбором и&nbsp;завышенными ценами</p>
+                        <p class="interviews-story__problem">Проблема: Поиск жилья</p>
+                      </div>
+                    </article>
+                  </div>
+                </article>
+                <!-- 04–05. ФИНАЛЬНЫЙ РЯД: на широком экране модули занимают 60/40. -->
+                <div class="interviews-final-row">
+                  <!-- 04. НАБЛЮДЕНИЯ: три короткие карточки без нумерации. -->
+                  <article class="tile interviews-observations-module">
+                    <p class="eyebrow">04 / Наблюдения</p>
+                    <h3>Проблемы на&nbsp;разных этапах поездки</h3>
+                    <ul class="interviews-observations">
+                      <li>
+                        <h4>Информация разбросана</h4>
+                        <p>Билеты, адреса и&nbsp;расписания хранятся в&nbsp;разных сервисах</p>
+                      </li>
+                      <li>
+                        <h4>Цена и&nbsp;удобство</h4>
+                        <p>При&nbsp;выборе жилья и&nbsp;транспорта приходится искать компромисс</p>
+                      </li>
+                      <li>
+                        <h4>Логистика события</h4>
+                        <p>Дорогу до&nbsp;площадки и&nbsp;обратно не&nbsp;всегда продумывают заранее</p>
+                      </li>
+                    </ul>
+                  </article>
+                  <!-- 05. СЛЕДУЮЩИЙ ЭТАП: существующий обработчик переключает таб и прокрутку. -->
+                  <article class="tile tile--dark interviews-next">
+                    <p class="eyebrow">05 / Следующий этап</p>
+                    <h3>От&nbsp;историй&nbsp;— к&nbsp;проверке гипотез</h3>
+                    <p>После интервью мы&nbsp;сопоставили реальные ответы с&nbsp;нашими предположениями: что&nbsp;подтвердилось, что&nbsp;не&nbsp;подтвердилось и&nbsp;какие новые наблюдения появились</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <!-- ЭТАП 06: ПРОВЕРКА ГИПОТЕЗ. Четыре внешних модуля общего каскада. -->
+            <section class="research-panel validation-panel" id="research-panel-validation" role="tabpanel" aria-labelledby="research-tab-validation" tabindex="0" hidden>
+              <div class="validation-modules">
+                <!-- 01–02. ПРОЦЕСС И РЕЗУЛЬТАТ: 40/60 на desktop. -->
+                <div class="validation-summary-row">
+                  <!-- 01. ПРОЦЕСС ВАЛИДАЦИИ -->
+                  <article class="tile">
+                    <p class="eyebrow">01 / Процесс валидации</p>
+                    <h3>От&nbsp;отдельных интервью&nbsp;— к&nbsp;общей картине</h3>
+                    <p>Каждый участник команды проанализировал своё интервью и&nbsp;сопоставил ответы с&nbsp;гипотезами. Затем мы&nbsp;собрали общую матрицу, созвонились и&nbsp;вместе обсудили результаты</p>
+                    <ul class="validation-process">
+                      <li><h4>Личный анализ</h4><p>Разобрали ответы респондентов</p></li>
+                      <li><h4>Общая матрица</h4><p>Сопоставили ответы с&nbsp;гипотезами</p></li>
+                      <li><h4>Командный разбор</h4><p>Обсудили расхождения и&nbsp;выводы</p></li>
+                    </ul>
+                  </article>
+                  <!-- 02. РЕЗУЛЬТАТ: итог команды — 6 подтверждено, 12 частично, 9 не подтверждено. -->
+                  <article class="tile tile--modal-action">
+                    <p class="eyebrow">02 / Результат проверки</p>
+                    <h3>Не&nbsp;все предположения подтвердились</h3>
+                    <p class="validation-result"><strong>6&nbsp;из&nbsp;27</strong><span>подтвердились</span></p>
+                    <p>Часть предположений подтвердилась, часть&nbsp;— лишь частично. Девять гипотез не&nbsp;получили подтверждения. Это помогло пересмотреть приоритеты и&nbsp;не&nbsp;переносить в&nbsp;продукт функции только потому, что&nbsp;они казались полезными</p>
+                    <ul class="validation-legend">
+                      <li>
+                        <span class="validation-status validation-status--confirmed">
+                          <!-- check-contained.svg -->
+                          <svg class="validation-legend__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M15.142 9.983L10.875 14.25L9.4205 12.7955M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="currentColor"/>
+                          </svg>
+                          Подтверждено
+                        </span>
+                        <span>наблюдение совпало с&nbsp;гипотезой</span>
+                      </li>
+                      <li>
+                        <span class="validation-status validation-status--partial">
+                          <!-- cancel-left.svg -->
+                          <svg class="validation-legend__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <g opacity="0.9">
+                              <path d="M15.375 15.375L8.625 8.625M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-width="2" stroke-linecap="round" stroke="currentColor"/>
+                            </g>
+                          </svg>
+                          Частично
+                        </span>
+                        <span>опыт респондентов оказался неоднозначным</span>
+                      </li>
+                      <li>
+                        <span class="validation-status validation-status--unconfirmed">
+                          <!-- x-circle-contained.svg -->
+                          <svg class="validation-legend__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <path d="M15.8891 9.52513C16.2796 9.1346 16.2796 8.50144 15.8891 8.11091C15.4986 7.72039 14.8654 7.72039 14.4749 8.11091L15.182 8.81802L15.8891 9.52513ZM8.11091 14.4749C7.72039 14.8654 7.72039 15.4986 8.11091 15.8891C8.50144 16.2796 9.1346 16.2796 9.52513 15.8891L8.81802 15.182L8.11091 14.4749ZM14.4749 15.8891C14.8654 16.2796 15.4986 16.2796 15.8891 15.8891C16.2796 15.4986 16.2796 14.8654 15.8891 14.4749L15.182 15.182L14.4749 15.8891ZM9.52513 8.11091C9.1346 7.72039 8.50144 7.72039 8.11091 8.11091C7.72039 8.50144 7.72039 9.1346 8.11091 9.52513L8.81802 8.81802L9.52513 8.11091ZM21 12H20C20 16.4183 16.4183 20 12 20V21V22C17.5228 22 22 17.5228 22 12H21ZM12 21V20C7.58172 20 4 16.4183 4 12H3H2C2 17.5228 6.47715 22 12 22V21ZM3 12H4C4 7.58172 7.58172 4 12 4V3V2C6.47715 2 2 6.47715 2 12H3ZM12 3V4C16.4183 4 20 7.58172 20 12H21H22C22 6.47715 17.5228 2 12 2V3ZM15.182 8.81802L14.4749 8.11091L11.2929 11.2929L12 12L12.7071 12.7071L15.8891 9.52513L15.182 8.81802ZM12 12L11.2929 11.2929L8.11091 14.4749L8.81802 15.182L9.52513 15.8891L12.7071 12.7071L12 12ZM15.182 15.182L15.8891 14.4749L12.7071 11.2929L12 12L11.2929 12.7071L14.4749 15.8891L15.182 15.182ZM12 12L12.7071 11.2929L9.52513 8.11091L8.81802 8.81802L8.11091 9.52513L11.2929 12.7071L12 12Z" fill="currentColor"/>
+                          </svg>
+                          Не&nbsp;подтверждено
+                        </span>
+                        <span>интервью не&nbsp;поддержали предположение</span>
+                      </li>
+                    </ul>
+                    <div class="validation-matrix-link modal-action-footer">
+                      <button class="validation-matrix-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="validation-matrix-modal">Посмотреть матрицу валидации <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24"></button>
+                    </div>
+                  </article>
+                </div>
+                <!-- 03–04. ИНСАЙТЫ И ВЫВОД: 60/40 на desktop. -->
+                <div class="validation-conclusion-row">
+                  <!-- 03. КЛЮЧЕВЫЕ ИНСАЙТЫ: четыре внутренние карточки без отдельной анимации. -->
+                  <article class="tile">
+                    <p class="eyebrow">03 / Ключевые инсайты</p>
+                    <h3>Что&nbsp;показали интервью</h3>
+                    <div class="validation-insights">
+                      <article><h4>Билет&nbsp;— точка входа</h4><p>Покупка билета запускает подготовку поездки. Остальные компоненты пользователь собирает вокруг события</p></article>
+                      <article><h4>5–8 инструментов на&nbsp;поездку</h4><p>Билеты, транспорт, жильё, чаты и&nbsp;карты распределены между разными сервисами</p></article>
+                      <article><h4>Логистика дня события</h4><p>Как&nbsp;добраться, попасть на&nbsp;площадку и&nbsp;вернуться обратно&nbsp;— одна из&nbsp;наиболее заметных сложностей</p></article>
+                      <article><h4>Баланс цены и&nbsp;удобства</h4><p>Пользователям важнее подобрать комфортный вариант без&nbsp;переплаты, чем&nbsp;вести подробный бюджет</p></article>
+                    </div>
+                  </article>
+                  <!-- 04. ОБЩИЙ ВЫВОД -->
+                  <article class="tile tile--dark validation-conclusion">
+                    <p class="eyebrow">04 / От&nbsp;данных к&nbsp;решениям</p>
+                    <h3>Исследование помогло не&nbsp;только подтвердить предположения, но&nbsp;и&nbsp;отказаться от&nbsp;лишнего</h3>
+                    <p>Мы&nbsp;пересмотрели первоначальные идеи, уточнили приоритеты и&nbsp;определили, какие пользовательские задачи действительно стоит решать. Эти выводы стали основой дальнейшего проектирования</p>
+                  </article>
+                </div>
+              </div>
+            </section>
+            <!-- ЭТАП 07: JOB STORIES. Три внешних модуля общей каскадной анимации. -->
+            <section class="research-panel job-stories-panel" id="research-panel-job-stories" role="tabpanel" aria-labelledby="research-tab-job-stories" tabindex="0" hidden>
+              <div class="job-stories-modules">
+                <div class="job-stories-row">
+                  <!-- 01. ГЛАВНАЯ РАБОТА: смысловая плашка закреплена внизу. -->
+                  <article class="tile job-stories-primary">
+                    <p class="eyebrow">01 / Главная работа</p>
+                    <h3>Не&nbsp;просто попасть на&nbsp;событие. Прожить его целиком</h3>
+                    <p>Когда я&nbsp;узнаю о&nbsp;событии, на&nbsp;которое хочу попасть, я&nbsp;хочу быстро и&nbsp;недорого собрать поездку вокруг билета, чтобы прожить событие целиком без&nbsp;ручного перебора сервисов и&nbsp;сложностей в&nbsp;день мероприятия</p>
+                    <aside class="job-stories-key">
+                      <h4>Ключевой смысл</h4>
+                      <p>Билет&nbsp;— начало поездки, а&nbsp;не&nbsp;отдельная покупка</p>
+                    </aside>
+                  </article>
+                  <!-- 02. ПРИОРИТЕТЫ: краткий список, полный материал — в диалоге. -->
+                  <article class="tile tile--modal-action">
+                    <p class="eyebrow">02 / Приоритеты</p>
+                    <h3>На&nbsp;каких задачах сфокусировались</h3>
+                    <ul class="job-stories-priorities">
+                      <li><h4>Билеты без&nbsp;риска</h4><p>Понимать стоимость и&nbsp;доверять продавцу</p></li>
+                      <li><h4>Сборка поездки</h4><p>Подбирать дорогу и&nbsp;жильё под&nbsp;свои условия</p></li>
+                      <li><h4>День события</h4><p>Знать, как&nbsp;добраться до&nbsp;площадки и&nbsp;вернуться обратно</p></li>
+                    </ul>
+                    <div class="modal-action-footer">
+                      <button class="job-stories-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="job-stories-modal">
+                        Посмотреть все 10 Job Stories
+                        <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24">
+                      </button>
+                    </div>
+                  </article>
+                </div>
+                <!-- 03. ВЫВОД: приоритизация задач, а не окончательный состав MVP. -->
+                <article class="tile tile--dark job-stories-conclusion">
+                  <p class="eyebrow">03 / Вывод</p>
+                  <h3>От&nbsp;списка функций&nbsp;— к&nbsp;задачам пользователя</h3>
+                  <p>После проверки гипотез мы&nbsp;уточнили Job Stories и&nbsp;расставили приоритеты. В&nbsp;центре оказались надёжная покупка билета, гибкая сборка поездки и&nbsp;логистика дня события. Остальные задачи сохранили, но&nbsp;не&nbsp;стали делать их основой MVP</p>
+                </article>
+              </div>
+            </section>
+            <!-- ЭТАП 08: VALUE PROPOSITION CANVAS. Данные и геометрия — js/value-proposition.js. -->
+            <section class="research-panel" id="research-panel-value-proposition" role="tabpanel" aria-labelledby="research-tab-value-proposition" tabindex="0" hidden>
+              <article class="tile vpc-module">
+                <p class="eyebrow">Value Proposition Canvas</p>
+                <h3>Как&nbsp;потребности пользователя связаны с&nbsp;ценностью продукта</h3>
+                <p>Сопоставили задачи и&nbsp;проблемы пользователей с&nbsp;возможностями продукта, чтобы определить, какую ценность должен создавать Event First</p>
+                <div class="vpc-charts" id="vpc-charts"></div>
+                <p class="vpc-hint">Наведите на&nbsp;сектор или&nbsp;нажмите, чтобы узнать подробнее</p>
+                <noscript><p>Для&nbsp;интерактивной схемы включите JavaScript</p></noscript>
+              </article>
+            </section>
+            <!-- ЭТАП 09: MVP — выбранный состав первой версии, не результаты запуска. -->
+            <section class="research-panel" id="research-panel-mvp" role="tabpanel" aria-labelledby="research-tab-mvp" tabindex="0" hidden>
+              <div class="mvp-modules">
+                <div class="mvp-row">
+                  <!-- 01. ФОКУС: главная задача закреплена внизу карточки. -->
+                  <article class="tile mvp-focus">
+                    <p class="eyebrow">01 / Фокус MVP</p>
+                    <h3>Проверить главное, не&nbsp;строить всё сразу</h3>
+                    <p>Сфокусировались на&nbsp;сборке поездки вокруг билета: удобные варианты дороги и&nbsp;жилья, понятный выбор и&nbsp;подготовка к&nbsp;событию</p>
+                    <aside class="mvp-key">
+                      <h4>Главная задача</h4>
+                      <p>Помочь пользователю быстро перейти от&nbsp;билета к&nbsp;плану поездки</p>
+                    </aside>
+                  </article>
+                  <!-- 02. СОСТАВ: краткие направления без внутренней нумерации. -->
+                  <article class="tile tile--modal-action">
+                    <p class="eyebrow">02 / Состав релиза</p>
+                    <h3 class="mvp-count"><strong>6</strong><span>User Stories</span></h3>
+                    <p>От&nbsp;черновика поездки и&nbsp;сквозных фильтров до&nbsp;проверки билетов, логистики события, напоминаний и&nbsp;возможности поделиться планом</p>
+                    <ul class="mvp-directions">
+                      <li><h4>Сборка поездки</h4><p>Черновик и&nbsp;сквозные фильтры</p></li>
+                      <li><h4>Билет и&nbsp;событие</h4><p>Проверка продавца, напоминания и&nbsp;логистика</p></li>
+                      <li><h4>Совместная поездка</h4><p>Возможность поделиться планом</p></li>
+                    </ul>
+                    <div class="modal-action-footer">
+                      <button class="mvp-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="mvp-modal">
+                        Посмотреть состав MVP
+                        <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24">
+                      </button>
+                    </div>
+                  </article>
+                </div>
+                <!-- 03. ГРАНИЦЫ: дальнейшие сценарии остаются планом следующих релизов. -->
+                <article class="tile tile--dark mvp-boundary">
+                  <p class="eyebrow">03 / Границы релиза</p>
+                  <h3>Не&nbsp;всё полезное должно попасть в&nbsp;первую версию</h3>
+                  <p>Часть сценариев оставили на&nbsp;следующие релизы, чтобы не&nbsp;увеличивать сложность продукта до&nbsp;проверки его основной ценности</p>
+                  <div class="mvp-boundary__future">
+                    <h4>Следующие релизы</h4>
+                    <p>Более сложные сценарии бронирования, оплаты и&nbsp;организации совместных поездок</p>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <!-- ЭТАП 10: TONE OF VOICE — голос продукта как UX-решение. -->
+            <section class="research-panel" id="research-panel-tone-of-voice" role="tabpanel" aria-labelledby="research-tab-tone-of-voice" tabindex="0" hidden>
+              <div class="tov-modules">
+                <!-- 01. ХАРАКТЕР: четыре коротких принципа в неинтерактивных тегах. -->
+                <article class="tile tov-character tile--modal-action">
+                  <p class="eyebrow">01 / Характер общения</p>
+                  <h3>Не&nbsp;бот и&nbsp;не&nbsp;турагент. Местный гид</h3>
+                  <p>Говорим как&nbsp;человек, который уже бывал здесь: знаем нюансы, предупреждаем о&nbsp;сложностях и&nbsp;подсказываем следующий шаг. Без&nbsp;канцелярита, лишней заботливости и&nbsp;пустых обещаний</p>
+                  <div class="tags" aria-label="Характер общения">
+                    <span>Прямо</span><span>Понятно</span><span>По-человечески</span><span>Прозрачно</span>
+                  </div>
+                  <div class="modal-action-footer">
+                    <button class="tov-open modal-action-button" type="button" aria-haspopup="dialog" aria-controls="tov-modal">
+                      Посмотреть примеры общения
+                      <img src="assets/icons/arrow-up-right.svg" alt="" width="24" height="24">
+                    </button>
+                  </div>
+                </article>
+                <!-- 03. ПРИНЦИПЫ: смысловые группы без дополнительных подложек. -->
+                <article class="tile tile--dark tov-principles">
+                  <p class="eyebrow">03 / Принципы и&nbsp;границы</p>
+                  <h3>Дружелюбие не&nbsp;должно мешать точности</h3>
+                  <div class="tov-principles__columns">
+                    <div>
+                      <h4>Что&nbsp;делаем</h4>
+                      <p>Предупреждаем заранее, объясняем простыми словами, честно называем цену и&nbsp;даём следующий шаг</p>
+                    </div>
+                    <div>
+                      <h4>Чего избегаем</h4>
+                      <p>Не&nbsp;шутим о&nbsp;безопасности, не&nbsp;скрываем комиссии, не&nbsp;обещаем неподтверждённого и&nbsp;не&nbsp;используем канцелярит</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Четыре тематические группы и краткие темы формирует research-adaptive.js. -->
+        <div class="research-adaptive" hidden></div>
+        <!-- Прежние карточки сохранены: уберите hidden, чтобы снова показать их. -->
+        <div class="research-grid" hidden>
+          <article class="tile research-process">
+            <p class="eyebrow">Наш процесс</p>
+            <ol class="process-list">
+              <li><span>01</span><div><h3>Гипотезы</h3><p>Что&nbsp;сложно в&nbsp;поездке и&nbsp;как&nbsp;люди справляются сейчас?</p></div></li>
+              <li><span>02</span><div><h3>Интервью</h3><p>Разбирали конкретные поездки, решения и&nbsp;трудности</p></div></li>
+              <li><span>03</span><div><h3>Синтез</h3><p>Сопоставили ответы и&nbsp;уточнили ядро продукта</p></div></li>
+            </ol>
+          </article>
+          <article class="tile tile--lavender research-finding">
+            <p class="eyebrow">Что&nbsp;оказалось важным</p>
+            <h3>Надёжный билет<br>Понятный день события<br>Свобода выбора</h3>
+            <p>Покупка билета, оплата и&nbsp;логистика на&nbsp;месте оказались ощутимыми точками сложности. При&nbsp;этом готовый вариант поездки должен оставаться гибким</p>
+          </article>
+          <article class="tile research-change">
+            <p class="eyebrow">Как&nbsp;изменилось решение</p>
+            <h3>Конструктор вместо жёсткого пакета</h3>
+            <p>Предложить основу поездки и&nbsp;позволить заменить любой компонент: дорогу, жильё или&nbsp;трансфер</p>
+            <details>
+              <summary>Какие гипотезы не&nbsp;стали ядром</summary>
+              <p>В&nbsp;итоговых выводах исследования трекер бюджета, планировщик по&nbsp;дням, единое хранилище документов и&nbsp;снятие стресса при&nbsp;отменах не&nbsp;стали основой ценностного предложения. Это выводы учебного исследования, а&nbsp;не&nbsp;универсальное описание всех путешественников</p>
+            </details>
+          </article>
+        </div>
+      </section>
+      <!-- 05. ПРОЕКТ — концепция, реальные прототипы и система продукта -->
+      <section class="case-section container" id="project" data-typography="research" aria-labelledby="project-title" tabindex="-1">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Проект</p>
+          <h2 id="project-title">От&nbsp;исследований <br class="heading-break">к&nbsp;продукту</h2>
+          <p>Концепция Event First, интерфейсы, визуальная система и&nbsp;метрики, по&nbsp;которым планируем оценивать ценность продукта</p>
+        </div>
+        <!-- Первый ряд: концепция, NSM и сценарии. Второй: палитра и UI-kit. -->
+        <div class="project-layout">
+          <article class="tile project-concept" data-project-module>
+            <p class="eyebrow">01 / Концепция продукта</p>
+            <h3>Событие&nbsp;— начало поездки, а&nbsp;не&nbsp;отдельная покупка</h3>
+            <p>Event First помогает собрать поездку вокруг мероприятия: выбрать билет, подобрать дорогу и&nbsp;жильё, подготовиться ко&nbsp;дню события&nbsp;— без&nbsp;ручного перебора множества сервисов</p>
+            <div class="tags"><span>Билет как&nbsp;точка входа</span><span>Гибкая сборка</span><span>День события</span></div>
+          </article>
+          <article class="tile tile--modal-action project-nsm" data-project-module>
+            <p class="eyebrow">02 / Главная метрика</p>
+            <p class="project-nsm__accent" aria-label="North Star Metric">NSM</p>
+            <h3>Количество собранных поездок</h3>
+            <p>Собранной считаем поездку, в&nbsp;которой есть билет на&nbsp;событие и&nbsp;хотя&nbsp;бы один забронированный компонент&nbsp;— дорога или&nbsp;жильё</p>
+            <div class="modal-action-footer">
+              <button type="button" class="modal-action-button project-metrics-open" aria-haspopup="dialog" aria-controls="project-metrics-modal">Все метрики <img src="assets/icons/arrow-up-right.svg" width="24" height="24" alt=""></button>
+            </div>
+          </article>
+          <!-- Ключевые сценарии: компактное видео внутри обычной карточки. -->
+          <article class="tile project-scenarios" data-project-module aria-labelledby="project-scenarios-title">
+            <p class="eyebrow">03 / Ключевые сценарии</p>
+            <h3 id="project-scenarios-title">От&nbsp;концепции&nbsp;— к&nbsp;интерфейсам</h3>
+            <figure class="project-prototype" aria-labelledby="project-video-caption">
+            <div class="project-prototype__screen">
+              <video id="project-video" src="assets/video/event-demo.mov" width="393" height="852" controls muted playsinline preload="metadata" poster="assets/images/project/event-demo-poster.png" aria-label="Прототип: Карточка события">
+                Ваш браузер не&nbsp;поддерживает встроенное видео <a href="assets/video/event-demo.mov">Открыть видео</a>
+              </video>
+            </div>
+            <figcaption class="project-prototype__navigation">
+              <button type="button" class="project-video-prev" aria-label="Предыдущий сценарий" aria-controls="project-video"><img src="assets/icons/chevron-left.svg" alt="" width="24" height="24"></button>
+              <span id="project-video-caption" aria-live="polite" aria-atomic="true">Карточка события</span>
+              <button type="button" class="project-video-next" aria-label="Следующий сценарий" aria-controls="project-video"><img src="assets/icons/chevron-right.svg" alt="" width="24" height="24"></button>
+            </figcaption>
+            <div class="project-video-message" id="project-video-message" role="status" hidden></div>
+            </figure>
+          </article>
+          <!-- Палитра и UI-kit: общая строка 40/60, высота по содержимому. -->
+          <div class="project-system-row">
+            <article class="tile project-palette" data-project-module>
+              <p class="eyebrow">04 / Цветовая палитра</p>
+              <h3>Цвет помогает ориентироваться</h3>
+              <p>Нейтральная база не&nbsp;отвлекает от&nbsp;афиш. Фиолетовый помогает ориентироваться, лайм выделяет активные действия</p>
+              <div class="project-color-scales" id="project-color-scales" aria-label="Цветовые шкалы Event First"></div>
+              <noscript><p>Green Scale, Purple Scale, Gray Scale и&nbsp;System Scale</p></noscript>
+            </article>
+            <article class="tile project-design-system" data-project-module>
+              <p class="eyebrow">05 / Дизайн-система</p>
+              <h3>От&nbsp;компонентов к&nbsp;интерфейсам</h3>
+              <p>Базовые элементы и&nbsp;состояния, из&nbsp;которых собираются пользовательские сценарии</p>
+              <!-- Только пять исходных семейств из «компоненты.fig».
+                   Презентационный масштаб адаптируется внутри каждой группы. -->
+              <!-- Три смысловые группы: Ticket → Navigation → Buttons.
+                   SVG и тень не изменяются; анимируются только группы. -->
+              <div class="project-showcase project-showcase--compact project-showcase--horizontal">
+                <div class="project-kit-group project-kit-group--ticket" data-showcase-part>
+                  <figure class="project-kit-zone project-kit-ticket">
+                    <!-- В SVG включены исходная тень и прозрачные поля 64 единицы.
+                    Не добавлять CSS box-shadow и не обрезать контейнер. -->
+                    <img class="project-kit-component" style="--kit-native-width: 521px" src="assets/images/project/components/ticket.svg" width="521" height="390" loading="lazy" alt="Ticket — билет на концерт The Weeknd">
+                  </figure>
+                </div>
+                <div class="project-kit-group project-kit-group--navigation" data-showcase-part>
+                  <div class="project-kit-group__content">
+                    <figure class="project-kit-zone project-kit-topbar">
+                      <div class="project-kit-surface">
+                        <img class="project-kit-component" style="--kit-native-width: 393px" src="assets/images/project/components/topbar.svg" width="393" height="106" loading="lazy" alt="Topbar — заголовок события и кнопка назад">
+                      </div>
+                    </figure>
+                    <figure class="project-kit-zone project-kit-navbar">
+                      <div class="project-kit-surface">
+                        <img class="project-kit-component" style="--kit-native-width: 393px" src="assets/images/project/components/navigation-home.svg" width="393" height="91" loading="lazy" alt="Tab Bar — навигация, активна «Главная»">
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="project-kit-group project-kit-group--buttons" data-showcase-part>
+                  <div class="project-kit-controls">
+                    <figure class="project-kit-zone">
+                      <div class="project-kit-surface project-kit-button-states">
+                        <img class="project-kit-component" style="--kit-native-width: 373.33334px" src="assets/images/project/components/button-default.svg" width="374" height="52" loading="lazy" alt="Button — Default">
+                        <img class="project-kit-component" style="--kit-native-width: 373.33334px" src="assets/images/project/components/button-pressed.svg" width="374" height="52" loading="lazy" alt="Button — Pressed">
+                        <img class="project-kit-component" style="--kit-native-width: 373.33334px" src="assets/images/project/components/button-disabled.svg" width="374" height="52" loading="lazy" alt="Button — Disabled">
+                      </div>
+                    </figure>
+                    <figure class="project-kit-zone">
+                      <div class="project-kit-surface project-kit-circle-surface">
+                        <div class="project-kit-circle-states">
+                          <img src="assets/images/project/components/circle-arrow-default.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — arrow, Default">
+                          <img src="assets/images/project/components/circle-plus-default.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — plus, Default">
+                          <img src="assets/images/project/components/circle-arrow-pressed.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — arrow, Pressed">
+                          <img src="assets/images/project/components/circle-plus-pressed.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — plus, Pressed">
+                          <img src="assets/images/project/components/circle-arrow-disabled.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — arrow, Disabled">
+                          <img src="assets/images/project/components/circle-plus-disabled.svg" width="32" height="32" loading="lazy" alt="Button_circle_32 — plus, Disabled">
+                        </div>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- Адаптив: одна карточка, полные исходные материалы доступны в шторке. -->
+        <div class="project-adaptive" hidden>
+          <article class="tile tile--modal-action project-summary-card">
+            <p class="eyebrow">Event First / Концепция</p>
+            <h3>Событие — начало поездки, а&nbsp;не&nbsp;отдельная покупка</h3>
+            <p>От&nbsp;билета к&nbsp;готовому плану: дорога, жильё и&nbsp;логистика в&nbsp;одном сценарии с&nbsp;возможностью самостоятельно выбирать компоненты</p>
+            <div class="tags"><span>Билет как&nbsp;точка входа</span><span>Гибкая сборка</span><span>День события</span></div>
+            <div class="project-summary-nsm">
+              <p class="eyebrow">NSM / Главная метрика</p>
+              <h4>Количество собранных поездок</h4>
+              <p>Билет на&nbsp;событие + хотя&nbsp;бы один забронированный компонент поездки</p>
+            </div>
+            <div class="modal-action-footer">
+              <button type="button" class="modal-action-button project-details-open" aria-haspopup="dialog" aria-controls="project-details-sheet">Подробнее <img src="assets/icons/arrow-up-right.svg" width="24" height="24" alt=""></button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- 06. КОМАНДА — короткое редакционное вступление -->
+      <section class="case-section container team-section" id="team" aria-labelledby="team-title" tabindex="-1">
+        <div class="section-heading team-section__heading">
+          <h2 id="team-title">Вместе получилось интереснее</h2>
+          <p>Созвоны, дедлайны, споры о&nbsp;решениях и&nbsp;совместная работа в&nbsp;Figma. Не&nbsp;всегда идеально по&nbsp;процессу, зато с&nbsp;настоящей командной работой</p>
+        </div>
+        <!-- Замените src у каждого изображения на фотографию участника.
+             Положение лица настраивается через object-position в css/team.css. -->
+        <ul class="team-portraits" aria-label="Участники команды">
+          <li class="team-member team-member--anton">
+            <figure class="team-member__figure">
+              <img class="team-member__photo" src="assets/Антон.jpg" width="640" height="640" alt="Антон — участник команды" loading="lazy">
+              <figcaption>Антон</figcaption>
+            </figure>
+          </li>
+          <li class="team-member team-member--lera">
+            <figure class="team-member__figure">
+              <img class="team-member__photo" src="assets/Лера.jpg" width="640" height="640" alt="Лера — участница команды" loading="lazy">
+              <figcaption>Лера</figcaption>
+            </figure>
+          </li>
+          <li class="team-member team-member--dasha">
+            <figure class="team-member__figure">
+              <img class="team-member__photo" src="assets/даша.jpg" width="640" height="640" alt="Даша — участница команды" loading="lazy">
+              <figcaption>Даша</figcaption>
+            </figure>
+          </li>
+          <li class="team-member team-member--yana">
+            <figure class="team-member__figure">
+              <img class="team-member__photo" src="assets/яна.jpg" width="640" height="640" alt="Яна — участница команды" loading="lazy">
+              <figcaption>Яна</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- 07. ВЫВОДЫ — личный опыт, команда и роль ИИ -->
+      <section class="case-section container" data-typography="research" id="insights" aria-labelledby="insights-title" tabindex="-1">
+        <div class="section-heading">
+          <p class="eyebrow">05 / Выводы</p>
+          <h2 id="insights-title">Больше, чем&nbsp;ещё <br class="heading-break">один проект</h2>
+          <p>Другой контекст помог посмотреть на&nbsp;привычную работу по-новому: через&nbsp;команду, исследование и&nbsp;собственные решения</p>
+        </div>
+        <div class="insights-grid">
+          <article class="tile">
+            <p class="eyebrow">Командная работа</p>
+            <h3>Общее решение нужно собрать</h3>
+            <p>Договариваться, обсуждать разные подходы и&nbsp;двигаться вместе&nbsp;— такая&nbsp;же часть работы, как&nbsp;исследование и&nbsp;интерфейсы</p>
+          </article>
+          <article class="tile tile--lavender">
+            <p class="eyebrow">ИИ в&nbsp;процессе</p>
+            <h3>Быстрее&nbsp;— с&nbsp;участием человека</h3>
+            <p>ИИ помогал с&nbsp;гипотезами, анализом, метриками и&nbsp;текстами. Ответы обсуждали, исправляли и&nbsp;дополняли опытом команды</p>
+          </article>
+          <article class="tile">
+            <p class="eyebrow">Личный инсайт</p>
+            <h3>Не&nbsp;отдавать своё мышление</h3>
+            <p>Ускорение работы полезно. Но&nbsp;важно продолжать задавать вопросы, проверять выводы и&nbsp;понимать, почему принимаешь решение</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- 07. ПОДВАЛ -->
+    <footer class="site-footer container">
+      <p><span>Учебный проект ·</span> <span class="site-footer__discipline">Продуктовый дизайн</span></p>
+      <a href="#top">К&nbsp;началу&nbsp;↑</a>
+    </footer>
+    <!-- АДАПТИВНАЯ НАВИГАЦИЯ — одна фиксированная кнопка и native dialog. -->
+    <button class="site-menu-toggle" id="site-menu-toggle" type="button" aria-label="Открыть навигацию" aria-expanded="false" aria-controls="site-nav-drawer" aria-haspopup="dialog">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <g class="site-menu-toggle__burger"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+        <g class="site-menu-toggle__close"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></g>
+      </svg>
+    </button>
+    <dialog class="site-drawer" id="site-nav-drawer" aria-label="Разделы сайта">
+      <div class="site-drawer__surface">
+        <nav class="site-drawer__nav" aria-label="Основные разделы">
+          <a href="#top" data-drawer-link><span class="site-drawer__number" aria-hidden="true">00 /</span><span class="site-drawer__name">Главная</span></a>
+          <a href="#course" data-drawer-link><span class="site-drawer__number" aria-hidden="true">01 /</span><span class="site-drawer__name">О&nbsp;курсе</span></a>
+          <a href="#research" data-drawer-link><span class="site-drawer__number" aria-hidden="true">02 /</span><span class="site-drawer__name">Исследования</span></a>
+          <a href="#project" data-drawer-link><span class="site-drawer__number" aria-hidden="true">03 /</span><span class="site-drawer__name">Проект</span></a>
+          <a href="#team" data-drawer-link><span class="site-drawer__number" aria-hidden="true">04 /</span><span class="site-drawer__name">Команда</span></a>
+          <a href="#insights" data-drawer-link><span class="site-drawer__number" aria-hidden="true">05 /</span><span class="site-drawer__name">Выводы</span></a>
+        </nav>
+      </div>
+    </dialog>
+    <!-- О КУРСЕ — полные тексты берутся из desktop-карточек, единый SiteDialog. -->
+    <dialog class="hypotheses-modal course-details-modal" data-typography="research" id="course-details-modal" aria-labelledby="course-details-title">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <span class="course-details-handle" aria-hidden="true"></span>
+          <div class="hypotheses-modal__heading">
+            <h2 id="course-details-title" tabindex="-1">О&nbsp;курсе</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть подробности о курсе">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+        </header>
+        <div class="hypotheses-modal__scroll course-details-content" tabindex="0" role="region" aria-label="Полная информация о курсе"></div>
+      </div>
+    </dialog>
+    <!-- Единая шторка темы: реальные desktop-панели временно переносятся сюда. -->
+    <dialog class="hypotheses-modal research-topic-sheet" data-typography="research" id="research-topic-sheet" aria-labelledby="research-topic-sheet-title">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <span class="bottom-sheet-handle" aria-hidden="true"></span>
+          <div class="hypotheses-modal__heading">
+            <h2 id="research-topic-sheet-title" tabindex="-1"></h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть подробности исследования"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+          </div>
+        </header>
+        <div class="hypotheses-modal__scroll research-topic-sheet__content" tabindex="0" role="region" aria-label="Полное содержание исследования"></div>
+      </div>
+    </dialog>
+    <!-- МОДАЛЬНОЕ ОКНО ГИПОТЕЗ. Прямой потомок body, вне анимируемых модулей. -->
+    <dialog class="hypotheses-modal" data-typography="research" id="hypotheses-modal" aria-labelledby="hypotheses-modal-title" aria-describedby="hypotheses-modal-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="hypotheses-modal-title" tabindex="-1">Исследовательские гипотезы</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть гипотезы">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="hypotheses-modal-description">Предположения, которые мы&nbsp;сформулировали до&nbsp;проведения интервью</p>
+          <div class="hypotheses-modal__filters">
+            <div class="hypotheses-modal__filter">
+              <span id="hypotheses-filter-label">Тематическая группа</span>
+              <div class="hypotheses-dropdown">
+                <button class="hypotheses-dropdown__trigger" id="hypotheses-category" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="hypotheses-options" aria-labelledby="hypotheses-filter-label hypotheses-filter-value">
+                  <span id="hypotheses-filter-value">Все гипотезы</span>
+                  <span class="hypotheses-dropdown__sizer" aria-hidden="true"></span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                    <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+                <!-- Группы и их состояния формируются из массива hypotheses. -->
+                <div class="hypotheses-dropdown__options" id="hypotheses-options" role="listbox" aria-labelledby="hypotheses-filter-label" aria-multiselectable="true" hidden></div>
+              </div>
+            </div>
+            <button class="hypotheses-modal__clear" type="button" disabled>Очистить</button>
+          </div>
+        </header>
+        <div class="hypotheses-modal__scroll" tabindex="0" role="region" aria-label="Список исследовательских гипотез">
+          <!-- Список заполняется из массива hypotheses в js/hypotheses-modal.js. -->
+          <ol class="hypotheses-modal__list" id="hypotheses-list"></ol>
+          <p class="hypotheses-modal__empty" hidden>В&nbsp;этой группе пока нет гипотез</p>
+        </div>
+      </div>
+    </dialog>
+    <!-- ИНТЕРВЬЮ-ГАЙД: отдельный диалог в top layer, вне каскадной анимации. -->
+    <dialog class="hypotheses-modal" data-typography="research" id="interview-guide-modal" aria-labelledby="interview-guide-title" aria-describedby="interview-guide-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="interview-guide-title" tabindex="-1">Интервью-гайд</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть интервью-гайд">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="interview-guide-description">Вопросы, составленные на&nbsp;основе исследовательских гипотез</p>
+        </header>
+        <div class="hypotheses-modal__scroll" tabindex="0" role="region" aria-label="Список вопросов интервью">
+          <aside class="interview-guide__rule" aria-labelledby="interview-guide-rule-title">
+            <h3 id="interview-guide-rule-title">Главное правило интервью</h3>
+            <p>Опираемся на&nbsp;реальный опыт, а&nbsp;не&nbsp;гипотетические ситуации. Если респондент начинает обобщать, возвращаем его к&nbsp;конкретной поездке: «А&nbsp;в&nbsp;тот раз как&nbsp;было?»</p>
+          </aside>
+          <!-- Все этапы и вопросы заполняются из interviewGuideQuestions. -->
+          <ol class="hypotheses-modal__list" id="interview-guide-list"></ol>
+          <p class="interview-guide__duration muted" id="interview-guide-duration"></p>
+        </div>
+      </div>
+    </dialog>
+    <!-- МАТРИЦА ВАЛИДАЦИИ: top layer вне анимируемых карточек. -->
+    <dialog class="hypotheses-modal validation-matrix" data-typography="research" id="validation-matrix-modal" aria-labelledby="validation-matrix-title" aria-describedby="validation-matrix-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="validation-matrix-title" tabindex="-1">Матрица валидации гипотез</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть матрицу валидации">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+            </button>
+          </div>
+          <p id="validation-matrix-description">Результаты сопоставления исследовательских гипотез с&nbsp;ответами респондентов</p>
+        </header>
+        <div class="hypotheses-modal__scroll" tabindex="0" role="region" aria-label="Матрица итоговых и индивидуальных результатов">
+          <div class="validation-matrix__legend" id="validation-matrix-legend"></div>
+          <p class="validation-matrix__notice muted" id="validation-matrix-notice">Итог команды: подтверждено&nbsp;— 6, частично&nbsp;— 12, не&nbsp;подтверждено&nbsp;— 9</p>
+          <!-- Desktop: таблица; mobile: гипотеза и список индивидуальных результатов. -->
+          <div class="validation-matrix__desktop" tabindex="0" role="region" aria-label="Таблица гипотез с горизонтальной прокруткой">
+            <table class="validation-matrix__table" aria-label="Итоговые статусы исследовательских гипотез">
+              <thead id="validation-matrix-head"></thead>
+              <tbody id="validation-matrix-body"></tbody>
+            </table>
+          </div>
+          <ol class="validation-matrix__mobile" id="validation-matrix-mobile" role="list"></ol>
+        </div>
+      </div>
+    </dialog>
+    <!-- JOB STORIES: отдельный диалог в top layer, содержимое — в js/job-stories.js. -->
+    <dialog class="hypotheses-modal" data-typography="research" id="job-stories-modal" aria-labelledby="job-stories-modal-title" aria-describedby="job-stories-modal-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="job-stories-modal-title" tabindex="-1">Job Stories</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть Job Stories">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="job-stories-modal-description">Пользовательские задачи, которые мы&nbsp;уточнили после проверки исследовательских гипотез</p>
+        </header>
+        <div class="hypotheses-modal__scroll" tabindex="0" role="region" aria-label="Полный список Job Stories, границы продукта и приоритеты">
+          <div id="job-stories-content"></div>
+        </div>
+      </div>
+    </dialog>
+    <!-- СОСТАВ MVP: общий диалог с мобильной шторкой; данные — в js/mvp.js. -->
+    <dialog class="hypotheses-modal" data-typography="research" id="mvp-modal" aria-labelledby="mvp-modal-title" aria-describedby="mvp-modal-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="mvp-modal-title" tabindex="-1">Состав MVP</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть состав MVP">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="mvp-modal-description">Шесть User Stories, которые мы&nbsp;выбрали для&nbsp;первой версии Event First</p>
+        </header>
+        <div class="hypotheses-modal__scroll" tabindex="0" role="region" aria-label="Шесть User Stories первой версии">
+          <ol class="mvp-stories" id="mvp-stories" role="list"></ol>
+        </div>
+      </div>
+    </dialog>
+    <!-- TONE OF VOICE: примеры перенесены из таба, без дублирования формулировок. -->
+    <dialog class="hypotheses-modal" data-typography="research" id="tov-modal" aria-labelledby="tov-modal-title" aria-describedby="tov-modal-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="tov-modal-title" tabindex="-1">Как&nbsp;это звучит</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть примеры общения">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="tov-modal-description">Не&nbsp;формально. А&nbsp;по&nbsp;делу</p>
+        </header>
+        <div class="hypotheses-modal__scroll tov-modal-content" tabindex="0" role="region" aria-label="Четыре пары демонстрационных формулировок">
+          <div class="tov-comparison-head" aria-hidden="true">
+            <h4>Так не&nbsp;говорим</h4><h4>Так говорим</h4>
+          </div>
+          <ul class="tov-examples" aria-label="Демонстрационные пары интерфейсных формулировок">
+            <li class="tov-example">
+              <div class="tov-example__before">
+                <p class="tov-example__label">Так не&nbsp;говорим</p>
+                <p>Ознакомьтесь с&nbsp;правилами площадки</p>
+              </div>
+              <div class="tov-example__after">
+                <p class="tov-example__label">Так говорим</p>
+                <p>Ваш вход&nbsp;— B, не&nbsp;главный. Воду на&nbsp;досмотре заберут</p>
+              </div>
+            </li>
+            <li class="tov-example">
+              <div class="tov-example__before">
+                <p class="tov-example__label">Так не&nbsp;говорим</p>
+                <p>Оптимальный пакет сформирован</p>
+              </div>
+              <div class="tov-example__after">
+                <p class="tov-example__label">Так говорим</p>
+                <p>Собрал дорогу и&nbsp;жильё: дешевле и&nbsp;без&nbsp;пересадок. Всё можно заменить</p>
+              </div>
+            </li>
+            <li class="tov-example">
+              <div class="tov-example__before">
+                <p class="tov-example__label">Так не&nbsp;говорим</p>
+                <p>Рекомендуем позаботиться о&nbsp;транспорте</p>
+              </div>
+              <div class="tov-example__after">
+                <p class="tov-example__label">Так говорим</p>
+                <p>После концерта метро будет переполнено. Трансфер отходит в&nbsp;23:40 со&nbsp;стороны аллеи</p>
+              </div>
+            </li>
+            <li class="tov-example">
+              <div class="tov-example__before">
+                <p class="tov-example__label">Так не&nbsp;говорим</p>
+                <p>Итоговая стоимость может отличаться</p>
+              </div>
+              <div class="tov-example__after">
+                <p class="tov-example__label">Так говорим</p>
+                <p>12&nbsp;400&nbsp;₽ — это всё вместе. Сборов сверху не&nbsp;будет</p>
+              </div>
+            </li>
+          </ul>
+          <p class="tov-examples-note">Конкретные сведения о&nbsp;правилах площадки, транспорте и&nbsp;стоимости должны основываться на&nbsp;проверенных данных</p>
+        </div>
+      </div>
+    </dialog>
+    <!-- Пояснение Canvas вынесено из анимируемого модуля, чтобы fixed не обрезался. -->
+    <div class="vpc-popover" id="vpc-popover" data-typography="research" role="tooltip" hidden>
+      <h4 id="vpc-popover-title"></h4>
+      <p id="vpc-popover-description"></p>
+    </div>
+    <!-- Метрики проекта: общий вид и механика существующих диалогов, без фильтрации. -->
+    <dialog class="hypotheses-modal project-metrics-modal" data-typography="research" id="project-metrics-modal" aria-labelledby="project-metrics-title" aria-describedby="project-metrics-description">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <div class="hypotheses-modal__heading">
+            <h2 id="project-metrics-title" tabindex="-1">Метрики продукта</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть метрики продукта"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
+          </div>
+          <p id="project-metrics-description">На&nbsp;старте решили не&nbsp;измерять всё подряд. Важнее понять, получает&nbsp;ли пользователь основную ценность и&nbsp;где возникают сложности</p>
+        </header>
+        <div class="hypotheses-modal__scroll project-metrics-content" tabindex="0" role="region" aria-label="Метрики MVP и дальнейшего развития">
+          <section aria-labelledby="project-mvp-metrics-title">
+            <h3 id="project-mvp-metrics-title">Метрики MVP</h3>
+            <table class="project-metrics-table">
+              <thead><tr><th scope="col">Метрика</th><th scope="col">Что&nbsp;измеряем</th></tr></thead>
+              <tbody>
+              <tr><th scope="row">Activation Rate</th><td>Доля пользователей, которые после добавления билета дошли до&nbsp;черновика поездки</td></tr>
+              <tr><th scope="row">Time to Value</th><td>Время от&nbsp;добавления билета до&nbsp;получения первого черновика</td></tr>
+              <tr><th scope="row">CR черновик → бронь</th><td>Доля пользователей, которые после создания черновика забронировали хотя&nbsp;бы один компонент</td></tr>
+              <tr><th scope="row">Attach Rate</th><td>Доля пользователей, добавивших к&nbsp;билету другие компоненты поездки</td></tr>
+              <tr><th scope="row">Drop-off Rate</th><td>Доля пользователей, уходящих на&nbsp;каждом этапе основного сценария</td></tr>
+              <tr><th scope="row">Crash-free Rate</th><td>Доля сессий без&nbsp;сбоев приложения</td></tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="project-metrics-future" aria-labelledby="project-future-metrics-title">
+            <h3 id="project-future-metrics-title">Дальнейшее развитие</h3>
+            <div><p class="muted">После первых реальных поездок</p><h4>NPS, CSAT, Feature Adoption</h4><p>Оценка пользовательского опыта, удовлетворённости и&nbsp;использования функций</p></div>
+            <div><p class="muted">На&nbsp;следующих этапах</p><h4>Retention и&nbsp;юнит-экономика</h4><p>Повторные поездки и&nbsp;устойчивость бизнес-модели</p></div>
+          </section>
+        </div>
+      </div>
+    </dialog>
+    <!-- Полный проект: общий native dialog / bottom sheet без вложенных окон. -->
+    <dialog class="hypotheses-modal project-details-sheet" data-typography="research" id="project-details-sheet" aria-labelledby="project-details-sheet-title">
+      <div class="hypotheses-modal__panel">
+        <header class="hypotheses-modal__header">
+          <span class="bottom-sheet-handle" aria-hidden="true"></span>
+          <div class="hypotheses-modal__heading">
+            <h2 id="project-details-sheet-title" tabindex="-1">Проект Event First</h2>
+            <button class="hypotheses-modal__close" type="button" aria-label="Закрыть проект"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 7L17 17M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg></button>
+          </div>
+        </header>
+        <div class="hypotheses-modal__scroll project-details-content" tabindex="0" role="region" aria-label="Полное содержание проекта"></div>
+      </div>
+    </dialog>
+  </body>
+</html>

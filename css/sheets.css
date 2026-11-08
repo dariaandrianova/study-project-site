@@ -1,0 +1,71 @@
+/* ЕДИНЫЕ BOTTOM SHEET: отдельные Header / Content, одна кнопка X. */
+@media (max-width: 767px) {
+  .hypotheses-modal { padding: 0; }
+  .hypotheses-modal[open] { place-items: end center; }
+  .hypotheses-modal .hypotheses-modal__panel {
+    width: 100%;
+    max-height: 90dvh;
+    border-radius: var(--radius) var(--radius) 0 0;
+    animation-name: hypotheses-sheet-in;
+  }
+  .hypotheses-modal.is-closing .hypotheses-modal__panel { animation-name: hypotheses-sheet-out; }
+  .hypotheses-modal__header {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    padding: 28px var(--space-module) var(--space-items);
+    background: var(--surface);
+    box-shadow: none;
+    transition: box-shadow 180ms ease;
+  }
+  /* X привязан к Header, а не к высоте или переносу заголовка. */
+  .hypotheses-modal__header .hypotheses-modal__heading,
+  .hypotheses-modal__header .hypotheses-modal__heading-row {
+    display: block;
+    min-height: 44px;
+  }
+  .hypotheses-modal__header h2 {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 0;
+    padding-right: 56px;
+    font-size: var(--text-dialog);
+    white-space: normal;
+  }
+  .hypotheses-modal__header .hypotheses-modal__close {
+    position: absolute;
+    top: 28px;
+    right: var(--space-module);
+  }
+  .hypotheses-modal__header.is-scrolled { box-shadow: var(--shadow-soft); }
+  .hypotheses-modal__scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 var(--space-module) max(var(--space-group), env(safe-area-inset-bottom));
+  }
+  .bottom-sheet-handle, .course-details-handle {
+    position: absolute;
+    top: var(--space-copy);
+    left: calc(50% - 20px);
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 0;
+    border-radius: 4px;
+    background: var(--line);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hypotheses-modal__header { transition: none; }
+}
+
+/* Исключение для слова, которое шире колонки рядом с X: сам X неподвижен. */
+@media (max-width: 767px) {
+  @container dialog-heading (max-width: 300px) {
+    #hypotheses-modal .hypotheses-modal__heading { padding-top: 44px; }
+    #hypotheses-modal-title { padding-right: 0; }
+  }
+}

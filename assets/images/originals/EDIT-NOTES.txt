@@ -1,0 +1,4 @@
+Original Hero assets before background recolor to #EEEEEE.
+Method: built-in image_gen.
+Prompt used for each image:
+Edit target: the attached existing website hero illustration. Change ONLY its warm beige background to flat neutral light gray #EEEEEE (RGB 238,238,238). Keep ALL foreground objects, people, faces, linework, colors, text, app screenshots, placement and framing unchanged. Do not redraw or reinterpret any foreground details. Preserve soft contact shadows on the newly gray backdrop. Keep original 5:4 landscape aspect ratio and full uncropped composition. No new objects or text. This is a strict background recolor, not a new illustration.

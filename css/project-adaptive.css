@@ -1,0 +1,46 @@
+/* ПРОЕКТ: адаптивная выжимка, desktop-сетка не меняется. */
+.project-adaptive { display: none; }
+.project-summary-card > p:not(.eyebrow), .project-summary-nsm > p:last-child { color: var(--muted); }
+#project .project-summary-card > .tags { margin: var(--space-items) 0 var(--space-group); padding: 0; }
+.project-summary-nsm h4 { margin: var(--space-related) 0; font-size: var(--text-body); }
+.project-summary-card > .modal-action-footer { margin-top: var(--space-group); }
+/* Шесть обычных смысловых групп вместо вложенной Bento-сетки. */
+.project-details-group { min-width: 0; }
+.project-details-group + .project-details-group { margin-top: var(--space-group); padding-top: var(--space-group); border-top: 1px solid var(--line); }
+.project-details-group > h3 { margin: var(--space-related) 0 var(--space-copy); }
+.project-details-group > p:not(.eyebrow), .project-details-group td, .project-details-decisions p { color: var(--muted); }
+.project-details-group > p + p { margin-top: var(--space-copy); }
+.project-details-group > .tags { margin-top: var(--space-items); }
+.project-details-group > section { margin-top: var(--space-group); }
+.project-details-group > section > h3 { margin-bottom: var(--space-copy); font-size: var(--text-body); }
+.project-details-decisions { display: grid; gap: var(--space-group); margin-top: var(--space-items); }
+.project-details-decisions h4 { margin-bottom: var(--space-related); font-size: var(--text-body); }
+.project-details-sheet .project-prototype { --project-preview-height: min(400px, 52dvh); margin-top: var(--space-items); }
+.project-details-sheet .project-color-scales { max-width: none; margin-top: var(--space-items); }
+.project-details-sheet .project-showcase { margin-top: var(--space-items); }
+.project-details-sheet .project-showcase--horizontal { grid-template-columns: minmax(0, 1fr); gap: var(--space-group); }
+.project-details-sheet .project-kit-group { grid-column: 1; }
+.project-details-sheet .project-kit-group--ticket { --kit-scale: .5; }
+.project-details-sheet .project-kit-group--navigation,
+.project-details-sheet .project-kit-group--buttons { --kit-scale: .625; }
+.project-details-sheet .project-kit-controls { grid-template-columns: minmax(0, 1fr); }
+.project-details-sheet .project-metrics-table,
+.project-details-sheet .project-metrics-table tbody,
+.project-details-sheet .project-metrics-table tr,
+.project-details-sheet .project-metrics-table th,
+.project-details-sheet .project-metrics-table td { display: block; width: 100%; }
+.project-details-sheet .project-metrics-table thead { display: none; }
+.project-details-sheet .project-metrics-table tbody tr { padding: var(--space-items) 0; border-bottom: 1px solid var(--line); }
+.project-details-sheet .project-metrics-table tbody th { padding: 0 0 var(--space-related); border: 0; }
+.project-details-sheet .project-metrics-table td { padding: 0; border: 0; }
+@media (max-width: 1024px) {
+  #project.project-has-adaptive > .project-layout { display: none; }
+  #project.project-has-adaptive > .section-heading { grid-template-columns: minmax(0, 1fr); }
+  .project-adaptive:not([hidden]) { display: block; }
+  .project-summary-card { padding: var(--space-group); }
+  .project-details-sheet .hypotheses-modal__panel { max-height: min(800px, 90dvh); }
+}
+@media (max-width: 767px) {
+  .project-summary-card { padding: var(--space-items); }
+  .project-details-sheet .project-color-scales { grid-template-columns: minmax(0, 1fr); }
+}

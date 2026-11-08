@@ -1,0 +1,60 @@
+/* ========================================================
+   04 / КОМАНДА — локальная типографика редакционного вступления
+   ======================================================== */
+.team-section {
+  border-top: 0;
+}
+.team-section__heading {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-copy);
+}
+.team-section__heading > h2 {
+  font-size: var(--text-team);
+  line-height: var(--line-team);
+}
+.team-section__heading > p:last-child {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+/* ПОРТРЕТЫ — смещение задаётся внешнему элементу, анимация внутреннему. */
+.team-portraits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 32px var(--space-module);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.team-member { min-width: 0; }
+.team-member:nth-child(even) { margin-top: 36px; }
+.team-member__figure { min-width: 0; }
+.team-member__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 24px;
+}
+/* Кадрируем только контейнер: исходные фотографии остаются без изменений. */
+.team-member--anton { --portrait-position: 46% 50%; }
+.team-member--lera { --portrait-position: 58% 50%; }
+.team-member--dasha { --portrait-position: 42% 50%; }
+.team-member--yana { --portrait-position: 40% 50%; }
+.team-member__photo { object-position: var(--portrait-position); }
+.team-member__figure > figcaption {
+  margin-top: 12px;
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .team-portraits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team-member:nth-child(even) { margin-top: 24px; }
+}
+@media (max-width: 760px) {
+  .team-member:nth-child(even) { margin-top: 20px; }
+  .team-member__photo { border-radius: 20px; }
+}
